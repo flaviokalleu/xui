@@ -1,0 +1,223 @@
+time=2026-05-14T22:40:13.848-03:00 level=INFO msg="database ready" path=./syncgo.db
+time=2026-05-14T22:40:13.859-03:00 level=INFO msg="config applied from DB"
+time=2026-05-14T22:40:13.859-03:00 level=INFO msg="loaded extra tokens from bot_tokens" count=1
+time=2026-05-14T22:40:14.527-03:00 level=INFO msg="bot api ready" username=playerkflixbot id=5683945052
+time=2026-05-14T22:40:14.631-03:00 level=INFO msg="xui mysql ready" host=179.127.21.168 db=xui
+time=2026-05-14T22:40:14.631-03:00 level=INFO msg="auto-insert habilitado" tmdb_lang=pt-BR
+time=2026-05-14T22:40:15.270-03:00 level=INFO msg="telegram client ready" index=0 bot=playerkflixbot id=5683945052 dc=0
+time=2026-05-14T22:40:15.270-03:00 level=INFO msg="primeiro cliente telegram pronto" total_esperados=2
+time=2026-05-14T22:40:15.271-03:00 level=INFO msg="telegram client ready" index=1 bot=uploadfilestraming_bot id=7409134871 dc=0
+time=2026-05-14T22:40:15.399-03:00 level=INFO msg="MTProto peer do canal log resolvido — uploads ilimitados habilitados"
+time=2026-05-14T22:40:15.399-03:00 level=INFO msg="bot api poller started"
+time=2026-05-14T22:40:15.399-03:00 level=INFO msg="HTTP server listening" addr=0.0.0.0:8080 url=http://localhost:8080 rate_limit_per_min_watch=120 stream_rate_limit="none (Telegram FloodWait)" shutdown_timeout=30s metrics=true
+time=2026-05-14T22:40:29.694-03:00 level=INFO msg="xtream: series fetched" count=7339
+time=2026-05-14T22:40:31.434-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/913735.mp4 name="Classico Americano (2026) S01E04"
+time=2026-05-14T22:40:32.366-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/913735.mp4 content-type=video/mp4 content-length=472145714
+time=2026-05-14T22:45:18.977-03:00 level=INFO msg="xtream: uploaded to telegram" name="Classico Americano (2026) S01E04.mp4" bytes=472145714 msg_id=205
+time=2026-05-14T22:45:19.022-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/254218.mp4 name="Classico Americano (2026) S01E05"
+time=2026-05-14T22:45:20.005-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/254218.mp4 content-type=video/mp4 content-length=305240835
+time=2026-05-14T22:48:34.650-03:00 level=INFO msg="xtream: uploaded to telegram" name="Classico Americano (2026) S01E05.mp4" bytes=305240835 msg_id=206
+time=2026-05-14T22:48:34.826-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/914248.mp4 name="Classico Americano (2026) S01E05"
+time=2026-05-14T22:48:35.772-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/914248.mp4 content-type=video/mp4 content-length=501037685
+time=2026-05-14T22:53:05.956-03:00 level=INFO msg="xtream: uploaded to telegram" name="Classico Americano (2026) S01E05.mp4" bytes=501037685 msg_id=207
+time=2026-05-14T22:53:06.006-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/255589.mp4 name="Classico Americano (2026) S01E06"
+time=2026-05-14T22:53:06.931-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/255589.mp4 content-type=video/mp4 content-length=279043223
+time=2026-05-14T22:55:25.570-03:00 level=INFO msg="xtream: uploaded to telegram" name="Classico Americano (2026) S01E06.mp4" bytes=279043223 msg_id=208
+time=2026-05-14T22:55:25.741-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/914882.mp4 name="Classico Americano (2026) S01E06"
+time=2026-05-14T22:55:26.853-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/914882.mp4 content-type=video/mp4 content-length=502870071
+time=2026-05-14T22:56:40.150-03:00 level=ERROR msg=StreamRange err="write tcp [::1]:8080->[::1]:52355: wsasend: Foi forçado o cancelamento de uma conexão existente pelo host remoto." msgid=199 from=4132095 to=422221621
+time=2026-05-14T22:59:27.112-03:00 level=INFO msg="xtream: uploaded to telegram" name="Classico Americano (2026) S01E06.mp4" bytes=502870071 msg_id=209
+time=2026-05-14T22:59:27.757-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251626.mp4 name="The Comeback (2005) S01E01"
+time=2026-05-14T22:59:28.690-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251626.mp4 content-type=video/mp4 content-length=318960606
+time=2026-05-14T23:02:23.672-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E01.mp4" bytes=318960606 msg_id=210
+time=2026-05-14T23:02:23.847-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908655.mp4 name="The Comeback (2005) S01E01"
+time=2026-05-14T23:02:24.705-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908655.mp4 content-type=video/mp4 content-length=473691242
+time=2026-05-14T23:07:11.201-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E01.mp4" bytes=473691242 msg_id=211
+time=2026-05-14T23:07:11.254-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908656.mp4 name="The Comeback (2005) S01E02"
+time=2026-05-14T23:07:12.301-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908656.mp4 content-type=video/mp4 content-length=421863239
+time=2026-05-14T23:10:23.038-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E02.mp4" bytes=421863239 msg_id=212
+time=2026-05-14T23:10:23.211-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251627.mp4 name="The Comeback (2005) S01E02"
+time=2026-05-14T23:10:24.195-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251627.mp4 content-type=video/mp4 content-length=319097610
+time=2026-05-14T23:13:39.072-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E02.mp4" bytes=319097610 msg_id=213
+time=2026-05-14T23:13:39.116-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251628.mp4 name="The Comeback (2005) S01E03"
+time=2026-05-14T23:13:40.086-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251628.mp4 content-type=video/mp4 content-length=319235929
+time=2026-05-14T23:17:29.818-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E03.mp4" bytes=319235929 msg_id=214
+time=2026-05-14T23:17:29.991-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908657.mp4 name="The Comeback (2005) S01E03"
+time=2026-05-14T23:17:30.903-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908657.mp4 content-type=video/mp4 content-length=404600579
+time=2026-05-14T23:22:00.038-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E03.mp4" bytes=404600579 msg_id=215
+time=2026-05-14T23:22:00.083-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251629.mp4 name="The Comeback (2005) S01E04"
+time=2026-05-14T23:22:00.995-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251629.mp4 content-type=video/mp4 content-length=319348347
+time=2026-05-14T23:25:34.431-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E04.mp4" bytes=319348347 msg_id=216
+time=2026-05-14T23:25:34.601-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908658.mp4 name="The Comeback (2005) S01E04"
+time=2026-05-14T23:25:35.512-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908658.mp4 content-type=video/mp4 content-length=420225348
+time=2026-05-14T23:30:27.736-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E04.mp4" bytes=420225348 msg_id=217
+time=2026-05-14T23:30:27.783-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251630.mp4 name="The Comeback (2005) S01E05"
+time=2026-05-14T23:30:28.714-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251630.mp4 content-type=video/mp4 content-length=318354964
+time=2026-05-14T23:33:24.381-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E05.mp4" bytes=318354964 msg_id=218
+time=2026-05-14T23:33:24.556-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908659.mp4 name="The Comeback (2005) S01E05"
+time=2026-05-14T23:33:25.994-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908659.mp4 content-type=video/mp4 content-length=393723067
+time=2026-05-14T23:37:46.879-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E05.mp4" bytes=393723067 msg_id=219
+time=2026-05-14T23:37:46.923-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908660.mp4 name="The Comeback (2005) S01E06"
+time=2026-05-14T23:37:47.873-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908660.mp4 content-type=video/mp4 content-length=408446273
+time=2026-05-14T23:43:09.355-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E06.mp4" bytes=408446273 msg_id=220
+time=2026-05-14T23:43:09.525-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251631.mp4 name="The Comeback (2005) S01E06"
+time=2026-05-14T23:43:10.923-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251631.mp4 content-type=video/mp4 content-length=318704151
+time=2026-05-14T23:47:30.186-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E06.mp4" bytes=318704151 msg_id=221
+time=2026-05-14T23:47:30.232-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251632.mp4 name="The Comeback (2005) S01E07"
+time=2026-05-14T23:47:31.237-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251632.mp4 content-type=video/mp4 content-length=318935314
+time=2026-05-14T23:51:52.262-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E07.mp4" bytes=318935314 msg_id=222
+time=2026-05-14T23:51:52.432-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908661.mp4 name="The Comeback (2005) S01E07"
+time=2026-05-14T23:51:53.737-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908661.mp4 content-type=video/mp4 content-length=414956763
+time=2026-05-14T23:56:55.614-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E07.mp4" bytes=414956763 msg_id=223
+time=2026-05-14T23:56:55.745-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908662.mp4 name="The Comeback (2005) S01E08"
+time=2026-05-14T23:56:56.645-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908662.mp4 content-type=video/mp4 content-length=423788823
+time=2026-05-15T00:02:14.042-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E08.mp4" bytes=423788823 msg_id=224
+time=2026-05-15T00:02:14.215-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251633.mp4 name="The Comeback (2005) S01E08"
+time=2026-05-15T00:02:15.210-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251633.mp4 content-type=video/mp4 content-length=317812857
+time=2026-05-15T00:05:38.460-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E08.mp4" bytes=317812857 msg_id=225
+time=2026-05-15T00:05:38.508-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908663.mp4 name="The Comeback (2005) S01E09"
+time=2026-05-15T00:05:39.373-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908663.mp4 content-type=video/mp4 content-length=434994144
+time=2026-05-15T00:09:58.242-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E09.mp4" bytes=434994144 msg_id=226
+time=2026-05-15T00:09:58.414-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251634.mp4 name="The Comeback (2005) S01E09"
+time=2026-05-15T00:09:59.322-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251634.mp4 content-type=video/mp4 content-length=317939097
+time=2026-05-15T00:13:01.842-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E09.mp4" bytes=317939097 msg_id=227
+time=2026-05-15T00:13:01.886-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908664.mp4 name="The Comeback (2005) S01E10"
+time=2026-05-15T00:13:02.883-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908664.mp4 content-type=video/mp4 content-length=423294655
+time=2026-05-15T00:17:32.646-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E10.mp4" bytes=423294655 msg_id=228
+time=2026-05-15T00:17:32.819-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251635.mp4 name="The Comeback (2005) S01E10"
+time=2026-05-15T00:17:33.761-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251635.mp4 content-type=video/mp4 content-length=319184617
+time=2026-05-15T00:20:14.248-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E10.mp4" bytes=319184617 msg_id=229
+time=2026-05-15T00:20:14.292-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908665.mp4 name="The Comeback (2005) S01E11"
+time=2026-05-15T00:20:15.129-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908665.mp4 content-type=video/mp4 content-length=424834561
+time=2026-05-15T00:25:11.568-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E11.mp4" bytes=424834561 msg_id=230
+time=2026-05-15T00:25:11.737-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251636.mp4 name="The Comeback (2005) S01E11"
+time=2026-05-15T00:25:12.747-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251636.mp4 content-type=video/mp4 content-length=318277802
+time=2026-05-15T00:28:22.204-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E11.mp4" bytes=318277802 msg_id=231
+time=2026-05-15T00:28:22.248-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251637.mp4 name="The Comeback (2005) S01E12"
+time=2026-05-15T00:28:23.153-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251637.mp4 content-type=video/mp4 content-length=318445748
+time=2026-05-15T00:30:51.023-03:00 level=ERROR msg=StreamRange err="write tcp [::1]:8080->[::1]:54243: wsasend: Foi forçado o cancelamento de uma conexão existente pelo host remoto." msgid=211 from=0 to=473691241
+time=2026-05-15T00:31:05.884-03:00 level=ERROR msg=StreamRange err="write tcp [::1]:8080->[::1]:54748: wsasend: Foi forçado o cancelamento de uma conexão existente pelo host remoto." msgid=211 from=18546688 to=473691241
+time=2026-05-15T00:32:27.602-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E12.mp4" bytes=318445748 msg_id=232
+time=2026-05-15T00:32:27.774-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908666.mp4 name="The Comeback (2005) S01E12"
+time=2026-05-15T00:32:28.845-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908666.mp4 content-type=video/mp4 content-length=426094620
+time=2026-05-15T00:36:24.423-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E12.mp4" bytes=426094620 msg_id=233
+time=2026-05-15T00:36:24.470-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908667.mp4 name="The Comeback (2005) S01E13"
+time=2026-05-15T00:36:25.680-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908667.mp4 content-type=video/mp4 content-length=439238073
+time=2026-05-15T00:41:37.314-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E13.mp4" bytes=439238073 msg_id=234
+time=2026-05-15T00:41:37.487-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251638.mp4 name="The Comeback (2005) S01E13"
+time=2026-05-15T00:41:38.341-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251638.mp4 content-type=video/mp4 content-length=319308022
+time=2026-05-15T00:44:49.454-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S01E13.mp4" bytes=319308022 msg_id=235
+time=2026-05-15T00:44:49.499-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908668.mp4 name="The Comeback (2005) S02E01"
+time=2026-05-15T00:44:50.366-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908668.mp4 content-type=video/mp4 content-length=602686803
+time=2026-05-15T00:50:55.851-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E01.mp4" bytes=602686803 msg_id=236
+time=2026-05-15T00:50:56.021-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251639.mp4 name="The Comeback (2005) S02E01"
+time=2026-05-15T00:50:56.905-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251639.mp4 content-type=video/mp4 content-length=319283513
+time=2026-05-15T00:54:39.185-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E01.mp4" bytes=319283513 msg_id=237
+time=2026-05-15T00:54:39.229-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908669.mp4 name="The Comeback (2005) S02E02"
+time=2026-05-15T00:54:40.280-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908669.mp4 content-type=video/mp4 content-length=437748285
+time=2026-05-15T00:59:41.360-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E02.mp4" bytes=437748285 msg_id=238
+time=2026-05-15T00:59:41.532-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251640.mp4 name="The Comeback (2005) S02E02"
+time=2026-05-15T00:59:42.441-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251640.mp4 content-type=video/mp4 content-length=319610317
+time=2026-05-15T01:03:07.587-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E02.mp4" bytes=319610317 msg_id=239
+time=2026-05-15T01:03:07.630-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908670.mp4 name="The Comeback (2005) S02E03"
+time=2026-05-15T01:03:08.803-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908670.mp4 content-type=video/mp4 content-length=435481008
+time=2026-05-15T01:08:29.289-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E03.mp4" bytes=435481008 msg_id=240
+time=2026-05-15T01:08:29.463-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251641.mp4 name="The Comeback (2005) S02E03"
+time=2026-05-15T01:08:30.419-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251641.mp4 content-type=video/mp4 content-length=320157313
+time=2026-05-15T01:12:20.440-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E03.mp4" bytes=320157313 msg_id=241
+time=2026-05-15T01:12:20.486-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908671.mp4 name="The Comeback (2005) S02E04"
+time=2026-05-15T01:12:21.358-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908671.mp4 content-type=video/mp4 content-length=366377689
+time=2026-05-15T01:16:04.028-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E04.mp4" bytes=366377689 msg_id=242
+time=2026-05-15T01:16:04.202-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251642.mp4 name="The Comeback (2005) S02E04"
+time=2026-05-15T01:16:05.132-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251642.mp4 content-type=video/mp4 content-length=320214362
+time=2026-05-15T01:19:46.033-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E04.mp4" bytes=320214362 msg_id=243
+time=2026-05-15T01:19:46.077-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908672.mp4 name="The Comeback (2005) S02E05"
+time=2026-05-15T01:19:47.103-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908672.mp4 content-type=video/mp4 content-length=477203460
+time=2026-05-15T01:24:41.979-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E05.mp4" bytes=477203460 msg_id=244
+time=2026-05-15T01:24:42.149-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251643.mp4 name="The Comeback (2005) S02E05"
+time=2026-05-15T01:24:43.069-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251643.mp4 content-type=video/mp4 content-length=319271610
+time=2026-05-15T01:28:50.391-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E05.mp4" bytes=319271610 msg_id=245
+time=2026-05-15T01:28:50.435-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908673.mp4 name="The Comeback (2005) S02E06"
+time=2026-05-15T01:28:51.347-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908673.mp4 content-type=video/mp4 content-length=469245552
+time=2026-05-15T01:34:02.868-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E06.mp4" bytes=469245552 msg_id=246
+time=2026-05-15T01:34:03.041-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251644.mp4 name="The Comeback (2005) S02E06"
+time=2026-05-15T01:34:04.202-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251644.mp4 content-type=video/mp4 content-length=319080423
+time=2026-05-15T01:37:14.900-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E06.mp4" bytes=319080423 msg_id=247
+time=2026-05-15T01:37:14.946-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908674.mp4 name="The Comeback (2005) S02E07"
+time=2026-05-15T01:37:15.836-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908674.mp4 content-type=video/mp4 content-length=472701985
+time=2026-05-15T01:41:20.383-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E07.mp4" bytes=472701985 msg_id=248
+time=2026-05-15T01:41:20.591-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251645.mp4 name="The Comeback (2005) S02E07"
+time=2026-05-15T01:41:21.551-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251645.mp4 content-type=video/mp4 content-length=318928888
+time=2026-05-15T01:44:44.485-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E07.mp4" bytes=318928888 msg_id=249
+time=2026-05-15T01:44:44.530-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908675.mp4 name="The Comeback (2005) S02E08"
+time=2026-05-15T01:44:45.389-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908675.mp4 content-type=video/mp4 content-length=798661673
+time=2026-05-15T01:52:38.825-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E08.mp4" bytes=798661673 msg_id=250
+time=2026-05-15T01:52:39.000-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251646.mp4 name="The Comeback (2005) S02E08"
+time=2026-05-15T01:52:39.906-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251646.mp4 content-type=video/mp4 content-length=318554185
+time=2026-05-15T01:56:00.327-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S02E08.mp4" bytes=318554185 msg_id=251
+time=2026-05-15T01:56:00.372-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251647.mp4 name="The Comeback (2005) S03E01"
+time=2026-05-15T01:56:01.214-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251647.mp4 content-type=video/mp4 content-length=319859625
+time=2026-05-15T01:58:30.182-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E01.mp4" bytes=319859625 msg_id=252
+time=2026-05-15T01:58:30.355-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908676.mp4 name="The Comeback (2005) S03E01"
+time=2026-05-15T01:58:31.290-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908676.mp4 content-type=video/mp4 content-length=440689856
+time=2026-05-15T02:02:41.383-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E01.mp4" bytes=440689856 msg_id=253
+time=2026-05-15T02:02:41.428-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/909651.mp4 name="The Comeback (2005) S03E02"
+time=2026-05-15T02:02:42.366-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/909651.mp4 content-type=video/mp4 content-length=441727640
+time=2026-05-15T02:07:13.677-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E02.mp4" bytes=441727640 msg_id=254
+time=2026-05-15T02:07:13.844-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251648.mp4 name="The Comeback (2005) S03E02"
+time=2026-05-15T02:07:14.759-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251648.mp4 content-type=video/mp4 content-length=318951577
+time=2026-05-15T02:10:15.120-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E02.mp4" bytes=318951577 msg_id=255
+time=2026-05-15T02:10:15.165-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/910208.mp4 name="The Comeback (2005) S03E03"
+time=2026-05-15T02:10:16.039-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/910208.mp4 content-type=video/mp4 content-length=448076532
+time=2026-05-15T02:14:27.158-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E03.mp4" bytes=448076532 msg_id=256
+time=2026-05-15T02:14:27.330-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251649.mp4 name="The Comeback (2005) S03E03"
+time=2026-05-15T02:14:28.221-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251649.mp4 content-type=video/mp4 content-length=318714495
+time=2026-05-15T02:17:35.489-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E03.mp4" bytes=318714495 msg_id=257
+time=2026-05-15T02:17:35.534-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251650.mp4 name="The Comeback (2005) S03E04"
+time=2026-05-15T02:17:36.503-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251650.mp4 content-type=video/mp4 content-length=319662829
+time=2026-05-15T02:20:59.580-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E04.mp4" bytes=319662829 msg_id=258
+time=2026-05-15T02:20:59.749-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/911210.mp4 name="The Comeback (2005) S03E04"
+time=2026-05-15T02:21:00.619-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/911210.mp4 content-type=video/mp4 content-length=440458104
+time=2026-05-15T02:26:05.705-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E04.mp4" bytes=440458104 msg_id=259
+time=2026-05-15T02:26:05.834-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/913505.mp4 name="The Comeback (2005) S03E05"
+time=2026-05-15T02:26:06.958-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/913505.mp4 content-type=video/mp4 content-length=442214528
+time=2026-05-15T02:30:04.345-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E05.mp4" bytes=442214528 msg_id=260
+time=2026-05-15T02:30:04.431-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251651.mp4 name="The Comeback (2005) S03E05"
+time=2026-05-15T02:30:05.335-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251651.mp4 content-type=video/mp4 content-length=318296250
+time=2026-05-15T02:33:20.106-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E05.mp4" bytes=318296250 msg_id=261
+time=2026-05-15T02:33:20.236-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251652.mp4 name="The Comeback (2005) S03E06"
+time=2026-05-15T02:33:21.141-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/251652.mp4 content-type=video/mp4 content-length=318927339
+time=2026-05-15T02:35:47.510-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E06.mp4" bytes=318927339 msg_id=262
+time=2026-05-15T02:35:47.598-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/913656.mp4 name="The Comeback (2005) S03E06"
+time=2026-05-15T02:35:48.543-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/913656.mp4 content-type=video/mp4 content-length=448735310
+time=2026-05-15T02:38:53.967-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E06.mp4" bytes=448735310 msg_id=263
+time=2026-05-15T02:38:54.095-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/254211.mp4 name="The Comeback (2005) S03E07"
+time=2026-05-15T02:38:55.232-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/254211.mp4 content-type=video/mp4 content-length=413882074
+time=2026-05-15T02:42:57.182-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E07.mp4" bytes=413882074 msg_id=264
+time=2026-05-15T02:42:57.269-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/914292.mp4 name="The Comeback (2005) S03E07"
+time=2026-05-15T02:42:58.325-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/914292.mp4 content-type=video/mp4 content-length=452531804
+time=2026-05-15T02:47:05.811-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E07.mp4" bytes=452531804 msg_id=265
+time=2026-05-15T02:47:05.938-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/255585.mp4 name="The Comeback (2005) S03E08"
+time=2026-05-15T02:47:06.986-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/255585.mp4 content-type=video/mp4 content-length=278128412
+time=2026-05-15T02:49:30.071-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E08.mp4" bytes=278128412 msg_id=266
+time=2026-05-15T02:49:30.160-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/915045.mp4 name="The Comeback (2005) S03E08"
+time=2026-05-15T02:49:31.156-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/915045.mp4 content-type=video/mp4 content-length=657041473
+time=2026-05-15T02:55:23.784-03:00 level=INFO msg="xtream: uploaded to telegram" name="The Comeback (2005) S03E08.mp4" bytes=657041473 msg_id=267
+time=2026-05-15T02:55:24.471-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/250899.mp4 name="Rooster (2026) S01E01"
+time=2026-05-15T02:55:25.639-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/250899.mp4 content-type=video/mp4 content-length=618848409
+time=2026-05-15T02:59:54.127-03:00 level=INFO msg="xtream: uploaded to telegram" name="Rooster (2026) S01E01.mp4" bytes=618848409 msg_id=268
+time=2026-05-15T02:59:54.215-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/907467.mp4 name="Rooster (2026) S01E01"
+time=2026-05-15T02:59:55.416-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/907467.mp4 content-type=video/mp4 content-length=487580200
+time=2026-05-15T03:03:05.986-03:00 level=INFO msg="xtream: uploaded to telegram" name="Rooster (2026) S01E01.mp4" bytes=487580200 msg_id=269
+time=2026-05-15T03:03:06.116-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/911735.mp4 name="Rooster (2026) S01E02"
+time=2026-05-15T03:03:06.993-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/911735.mp4 content-type=video/mp4 content-length=431597360
+time=2026-05-15T03:06:05.445-03:00 level=INFO msg="xtream: uploaded to telegram" name="Rooster (2026) S01E02.mp4" bytes=431597360 msg_id=270
+time=2026-05-15T03:06:05.535-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/250900.mp4 name="Rooster (2026) S01E02"
+time=2026-05-15T03:06:06.426-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/250900.mp4 content-type=video/mp4 content-length=641215451
+time=2026-05-15T03:11:18.017-03:00 level=INFO msg="xtream: uploaded to telegram" name="Rooster (2026) S01E02.mp4" bytes=641215451 msg_id=271
+time=2026-05-15T03:11:18.143-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908509.mp4 name="Rooster (2026) S01E03"
+time=2026-05-15T03:11:19.110-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/908509.mp4 content-type=video/mp4 content-length=453930893
+time=2026-05-15T03:15:22.436-03:00 level=INFO msg="xtream: uploaded to telegram" name="Rooster (2026) S01E03.mp4" bytes=453930893 msg_id=272
+time=2026-05-15T03:15:22.522-03:00 level=INFO msg="xtream: downloading" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/250901.mp4 name="Rooster (2026) S01E03"
+time=2026-05-15T03:15:24.739-03:00 level=INFO msg="xtream: download started" url=http://serxui.pbecnettv.com/series/Flavio123@DIGNOMARAVILHOSO/tuzJGXnuT3/250901.mp4 content-type=video/mp4 content-length=612789279
+time=2026-05-15T03:17:32.034-03:00 level=INFO msg="shutting down"

@@ -1,0 +1,7 @@
+time=2026-05-12T20:15:29.460-03:00 level=INFO msg="database ready" path=./syncgo.db
+time=2026-05-12T20:15:30.200-03:00 level=INFO msg="bot api ready" username=playerkflixbot id=5683945052
+time=2026-05-12T20:15:32.996-03:00 level=WARN msg="xui mysql indisponível — auto-insert desabilitado" err="ping mysql 51.161.72.178:3306: dial tcp 51.161.72.178:3306: connectex: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente."
+time=2026-05-12T20:15:33.691-03:00 level=INFO msg="telegram client ready" index=0 bot=playerkflixbot id=5683945052
+time=2026-05-12T20:15:33.692-03:00 level=INFO msg="bot api poller started"
+time=2026-05-12T20:15:33.692-03:00 level=INFO msg="HTTP server listening" addr=0.0.0.0:8080 url=http://localhost:8080 rate_limit_per_min=120 shutdown_timeout=30s metrics=true
+time=2026-05-12T21:45:43.502-03:00 level=INFO msg="shutting down"

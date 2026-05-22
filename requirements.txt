@@ -1,0 +1,10 @@
+pandas
+openpyxl
+requests
+aiohttp
+mysql-connector-python
+python-dotenv
+tqdm
+colorama
+pyfiglet
+telethon

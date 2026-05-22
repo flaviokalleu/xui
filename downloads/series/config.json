@@ -1,0 +1,17 @@
+
+{
+    "api_id": "29055136",
+    "api_hash": "335c0d9e0c038973bc989bbe6c321de7",
+    "bot_token": "7841662461:AAFF3IVLx21SuyHsaGbfkFHGWCPPJVq0TLI",
+    "chat_id": "@syncronizadorupload_bot",
+    
+    "diretorio_download": "downloads",
+    "arquivo_m3u": "lista.m3u",
+    "arquivo_log": "download_log.txt",
+    
+    "max_tentativas": 3,
+    "tamanho_chunk": 524288,
+    "downloads_simultaneos": 2,
+    "tempo_limite_upload": 3600,
+    "workers": 2
+}

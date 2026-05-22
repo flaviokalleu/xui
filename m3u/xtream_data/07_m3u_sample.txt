@@ -1,0 +1,100 @@
+#EXTM3U
+#EXT-X-SESSION-DATA:DATA-ID="com.xui.1_5_13"
+#EXTINF:-1 xui-id="1" tvg-id="" tvg-name="GRADE DE JOGOS" tvg-logo="https://cdn-icons-png.flaticon.com/512/53/53283.png" group-title="CENTRAL DO CLIENTE",GRADE DE JOGOS
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_U2euFa8_-s54hnLxmj00LI/m3u8
+#EXTINF:-1 xui-id="2" tvg-id="" tvg-name="TOP 10 FILMES" tvg-logo="https://media.istockphoto.com/id/826167132/pt/foto/top-10-on-podium-isolated.jpg?s=612x612&w=0&k=20&c=Dhv-OVfJR-ART6o2oZNCErrb8FsSHe8e_FUoQyotYWU=" group-title="CENTRAL DO CLIENTE",TOP 10 FILMES
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_W4SpexD-FXwktWD7hPYDoU/m3u8
+#EXTINF:-1 xui-id="3" tvg-id="" tvg-name="TOP 10 SERIES" tvg-logo="https://media.istockphoto.com/id/826167132/pt/foto/top-10-on-podium-isolated.jpg?s=612x612&w=0&k=20&c=Dhv-OVfJR-ART6o2oZNCErrb8FsSHe8e_FUoQyotYWU=" group-title="CENTRAL DO CLIENTE",TOP 10 SERIES
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Wrk8zsHjDYclg-WlsTmbQC/m3u8
+#EXTINF:-1 xui-id="4" tvg-id="A&E HD" tvg-name="A&E 4K" tvg-logo="" group-title="✨ 4K",A&E 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_UctMdzLqqZJNQw-JNdqy4w/m3u8
+#EXTINF:-1 xui-id="5" tvg-id="322" tvg-name="Adult Swim 4K" tvg-logo="" group-title="✨ 4K",Adult Swim 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Xvjv0D-4LEAmfDPIotQ7rv/m3u8
+#EXTINF:-1 xui-id="6" tvg-id="AMC HD" tvg-name="AMC 4K" tvg-logo="" group-title="✨ 4K",AMC 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_W4HUwcWGDXLpF-3nUiBACi/m3u8
+#EXTINF:-1 xui-id="7" tvg-id="Animal Planet 4K" tvg-name="Animal Planet 4K" tvg-logo="" group-title="✨ 4K",Animal Planet 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_US0Xizu59rrf1WqhxHy3mr/m3u8
+#EXTINF:-1 xui-id="8" tvg-id="AXN HD" tvg-name="AXN 4K" tvg-logo="" group-title="✨ 4K",AXN 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Vo8hseubamMAx0RLNHy4-g/m3u8
+#EXTINF:-1 xui-id="9" tvg-id="BAND HD.br" tvg-name="Band 4K" tvg-logo="" group-title="✨ 4K",Band 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_XZcyrlw7C5hkWvKh3pqjus/m3u8
+#EXTINF:-1 xui-id="10" tvg-id="Band News SD" tvg-name="BandNews 4K" tvg-logo="" group-title="✨ 4K",BandNews 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_VISV5dHFFZpKDER4Z4DyPy/m3u8
+#EXTINF:-1 xui-id="11" tvg-id="Band Sports HD" tvg-name="BandSports 4K" tvg-logo="" group-title="✨ 4K",BandSports 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_WasttHilrIDvf8iM74f59q/m3u8
+#EXTINF:-1 xui-id="12" tvg-id="BIS HD" tvg-name="BIS 4K" tvg-logo="" group-title="✨ 4K",BIS 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_W5a614REmso3XoaXXwJ2jz/m3u8
+#EXTINF:-1 xui-id="13" tvg-id="Bloomberg HD.br" tvg-name="BLOOMBERG 4K" tvg-logo="" group-title="✨ 4K",BLOOMBERG 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_X2505fwlVonw470CTYV1C5/m3u8
+#EXTINF:-1 xui-id="14" tvg-id="Canal Brasil HD" tvg-name="Canal Brasil 4K" tvg-logo="" group-title="✨ 4K",Canal Brasil 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_VXE5GJPm7KphGnTCxXANfw/m3u8
+#EXTINF:-1 xui-id="15" tvg-id="Canal do Boi FHD" tvg-name="Canal do Boi 4K" tvg-logo="" group-title="✨ 4K",Canal do Boi 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_UZZk9Ix-IN2jbBj4D7KO2H/m3u8
+#EXTINF:-1 xui-id="16" tvg-id="Cancao Nova SD" tvg-name="Cancao Nova 4K" tvg-logo="" group-title="✨ 4K",Cancao Nova 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Wb2TpmRa2mMl0NF7OKveOt/m3u8
+#EXTINF:-1 xui-id="17" tvg-id="Cartoon Network 4K" tvg-name="Cartoon Network 4K" tvg-logo="" group-title="✨ 4K",Cartoon Network 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_WqO6_XZBIcfBlDrfaPd9Oa/m3u8
+#EXTINF:-1 xui-id="18" tvg-id="CARTOONITO.br" tvg-name="Cartoonito BR 4K" tvg-logo="" group-title="✨ 4K",Cartoonito BR 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_UU7LtBcLWs9c8tTRGOZmHm/m3u8
+#EXTINF:-1 xui-id="19" tvg-id="" tvg-name="CazéTV 4K" tvg-logo="http://plexys.top/logos/canais/cazetv.png" group-title="✨ 4K",CazéTV 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_VbcXh8Uo1v_bsRP9aosZZ1/m3u8
+#EXTINF:-1 xui-id="20" tvg-id="Cinemax HD" tvg-name="Cinemax HD 4K" tvg-logo="" group-title="✨ 4K",Cinemax HD 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_WdjDbRcRt-fcmXRMb2v8md/m3u8
+#EXTINF:-1 xui-id="21" tvg-id="CNN.br" tvg-name="CNN 4K" tvg-logo="" group-title="✨ 4K",CNN 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_WoIeETQBUCdXE5rddnr8lG/m3u8
+#EXTINF:-1 xui-id="22" tvg-id="CNN Brasil HD" tvg-name="CNN Brasil 4K" tvg-logo="" group-title="✨ 4K",CNN Brasil 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_WFYX90aqBYfEn2Twl61BsZ/m3u8
+#EXTINF:-1 xui-id="23" tvg-id="349" tvg-name="CNN Money 4K" tvg-logo="" group-title="✨ 4K",CNN Money 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_VzOiQMwMVG7nDnaIzzTbAL/m3u8
+#EXTINF:-1 xui-id="24" tvg-id="Discovery Channel 4K" tvg-name="Discovery Channel 4K" tvg-logo="" group-title="✨ 4K",Discovery Channel 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_UmBwkFaGCdBjeeycJz9Yp5/m3u8
+#EXTINF:-1 xui-id="25" tvg-id="8" tvg-name="Discovery H&H 4K" tvg-logo="" group-title="✨ 4K",Discovery H&H 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_WOSL0hFX9JUuYD9HJJzqL0/m3u8
+#EXTINF:-1 xui-id="26" tvg-id="Discovery Kids HD" tvg-name="Discovery Kids 4K" tvg-logo="" group-title="✨ 4K",Discovery Kids 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_VCjo6KI_8oweCiga9gqakt/m3u8
+#EXTINF:-1 xui-id="27" tvg-id="Discovery Science HD" tvg-name="Discovery Science 4K" tvg-logo="" group-title="✨ 4K",Discovery Science 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Xn3LQA-o6sYZ9f1jsZzZWt/m3u8
+#EXTINF:-1 xui-id="28" tvg-id="Discovery Theater HD" tvg-name="Discovery Theater 4K" tvg-logo="" group-title="✨ 4K",Discovery Theater 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_X3bhVbCtSC3dqV9tPgZ_rU/m3u8
+#EXTINF:-1 xui-id="29" tvg-id="Discovery Turbo HD" tvg-name="Discovery Turbo 4K" tvg-logo="" group-title="✨ 4K",Discovery Turbo 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_W3BO5cpHUtgmNG9mtMyjqX/m3u8
+#EXTINF:-1 xui-id="30" tvg-id="Discovery World HD" tvg-name="Discovery World 4K" tvg-logo="" group-title="✨ 4K",Discovery World 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_WK56RNs5Q0tcbpxRRmLqck/m3u8
+#EXTINF:-1 xui-id="31" tvg-id="ESPN 2 HD" tvg-name="ESPN 2 4K" tvg-logo="" group-title="✨ 4K",ESPN 2 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_XYiL9KbdY5HzdYIJ7vKlRZ/m3u8
+#EXTINF:-1 xui-id="32" tvg-id="ESPN 3 HD" tvg-name="ESPN 3 4K" tvg-logo="" group-title="✨ 4K",ESPN 3 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_X2qia-GHYOlM0rP1v99cRE/m3u8
+#EXTINF:-1 xui-id="33" tvg-id="ESPN 4 4K" tvg-name="ESPN 4 4K" tvg-logo="" group-title="✨ 4K",ESPN 4 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Wp6ttme391LjbHhRM3WFjQ/m3u8
+#EXTINF:-1 xui-id="34" tvg-id="ESPN 4k" tvg-name="ESPN 4K" tvg-logo="" group-title="✨ 4K",ESPN 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Wpdk-iUaxiL3RufWrAHbdy/m3u8
+#EXTINF:-1 xui-id="35" tvg-id="ESPN 4k" tvg-name="ESPN 5 4K" tvg-logo="" group-title="✨ 4K",ESPN 5 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Wx7hSiSjk9uaEZReoJ0GQf/m3u8
+#EXTINF:-1 xui-id="36" tvg-id="Food Network HD" tvg-name="Food Network 4K" tvg-logo="" group-title="✨ 4K",Food Network 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_XN1mkohRHx-Wwqtq90t1LC/m3u8
+#EXTINF:-1 xui-id="37" tvg-id="Futura HD" tvg-name="Futura 4K" tvg-logo="" group-title="✨ 4K",Futura 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_U_1wCa_2T2UBXH0HjPaMXs/m3u8
+#EXTINF:-1 xui-id="38" tvg-id="Globo News HD" tvg-name="GloboNews 4K" tvg-logo="" group-title="✨ 4K",GloboNews 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_XfMuEbge-meSJrVgvOq77s/m3u8
+#EXTINF:-1 xui-id="39" tvg-id="99" tvg-name="Globoplay Novelas 4K" tvg-logo="" group-title="✨ 4K",Globoplay Novelas 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_X_L3S_zkzbUvC3n7oCnn3J/m3u8
+#EXTINF:-1 xui-id="40" tvg-id="Gloob HD" tvg-name="Gloob 4K" tvg-logo="" group-title="✨ 4K",Gloob 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_X2WXyHyOMcZ8MfLT3gvjer/m3u8
+#EXTINF:-1 xui-id="41" tvg-id="94" tvg-name="Gloobinho 4K" tvg-logo="" group-title="✨ 4K",Gloobinho 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_WvJgVGY4uGXgfpKUMebOR8/m3u8
+#EXTINF:-1 xui-id="42" tvg-id="GNT HD" tvg-name="GNT 4K" tvg-logo="" group-title="✨ 4K",GNT 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_Uq1lM6H5g5tXg5Id1NeuOJ/m3u8
+#EXTINF:-1 xui-id="43" tvg-id="H2 HD" tvg-name="H2 4K" tvg-logo="" group-title="✨ 4K",H2 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_USmyAkvANNlgVpmFJ8XZi-/m3u8
+#EXTINF:-1 xui-id="44" tvg-id="HBO HD" tvg-name="HBO 4K" tvg-logo="" group-title="✨ 4K",HBO 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_VhLya8_SMYS-UuKBr0uviN/m3u8
+#EXTINF:-1 xui-id="45" tvg-id="HBO 2 HD" tvg-name="HBO2 4K" tvg-logo="" group-title="✨ 4K",HBO2 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_V7c4tJmNnOFUSFXlPkdcab/m3u8
+#EXTINF:-1 xui-id="46" tvg-id="HBO Family HD" tvg-name="HBO Family 4K" tvg-logo="" group-title="✨ 4K",HBO Family 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_VmHVwYS5hPtY8p6cDHCaIy/m3u8
+#EXTINF:-1 xui-id="47" tvg-id="262" tvg-name="HBO Plus 4K" tvg-logo="" group-title="✨ 4K",HBO Plus 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_XCh23wAjyAxoLLBqTMEOcR/m3u8
+#EXTINF:-1 xui-id="48" tvg-id="HBO Signature HD" tvg-name="HBO Signature 4K" tvg-logo="" group-title="✨ 4K",HBO Signature 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_XZ3-5ZbfE9vZ3qv1DpTmhT/m3u8
+#EXTINF:-1 xui-id="49" tvg-id="115" tvg-name="HGTV 4K" tvg-logo="" group-title="✨ 4K",HGTV 4K
+http://serxui.pbecnettv.com:80/play/GC8sjxlNxYm91Lzz0s3OR6M6oMb5gH3YdZnJd0aei_VMa-nT6FuHmrmBqJDDfdcE/m3u8

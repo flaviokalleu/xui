@@ -1,0 +1,257 @@
+[
+  {
+    "category_id": "1",
+    "category_name": "CENTRAL DO CLIENTE",
+    "parent_id": 0
+  },
+  {
+    "category_id": "17",
+    "category_name": "C • RELIGIOSOS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "18",
+    "category_name": "C • ESPORTES",
+    "parent_id": 0
+  },
+  {
+    "category_id": "19",
+    "category_name": "C • PREMIERE CLUBE",
+    "parent_id": 0
+  },
+  {
+    "category_id": "20",
+    "category_name": "C • CAZE TV",
+    "parent_id": 0
+  },
+  {
+    "category_id": "21",
+    "category_name": "C • SPORTV",
+    "parent_id": 0
+  },
+  {
+    "category_id": "22",
+    "category_name": "C • ESPN",
+    "parent_id": 0
+  },
+  {
+    "category_id": "23",
+    "category_name": "C • COMBATE",
+    "parent_id": 0
+  },
+  {
+    "category_id": "24",
+    "category_name": "C • ⚽ XSPORTS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "25",
+    "category_name": "C • ⚽ APPLE",
+    "parent_id": 0
+  },
+  {
+    "category_id": "26",
+    "category_name": "C • ⚽ BRAS. SERIE D",
+    "parent_id": 0
+  },
+  {
+    "category_id": "27",
+    "category_name": "C • ⚽ PAULISTÃO 2025",
+    "parent_id": 0
+  },
+  {
+    "category_id": "28",
+    "category_name": "C • ⚽ DISNEY PLUS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "16",
+    "category_name": "C • VARIEDADES",
+    "parent_id": 0
+  },
+  {
+    "category_id": "15",
+    "category_name": "C • HBO",
+    "parent_id": 0
+  },
+  {
+    "category_id": "14",
+    "category_name": "C • TELECINE",
+    "parent_id": 0
+  },
+  {
+    "category_id": "2",
+    "category_name": "✨ 4K",
+    "parent_id": 0
+  },
+  {
+    "category_id": "3",
+    "category_name": "C • CASA DO PATRAO",
+    "parent_id": 0
+  },
+  {
+    "category_id": "4",
+    "category_name": "C • ABERTOS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "5",
+    "category_name": "C • NOTICIAS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "6",
+    "category_name": "C • SBT",
+    "parent_id": 0
+  },
+  {
+    "category_id": "7",
+    "category_name": "C • RECORD",
+    "parent_id": 0
+  },
+  {
+    "category_id": "8",
+    "category_name": "C • BAND",
+    "parent_id": 0
+  },
+  {
+    "category_id": "9",
+    "category_name": "C • GLOBO + ASSITIDOS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "10",
+    "category_name": "C • GLOBO",
+    "parent_id": 0
+  },
+  {
+    "category_id": "11",
+    "category_name": "C • DOCUMENTARIOS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "12",
+    "category_name": "C • DISCOVERY",
+    "parent_id": 0
+  },
+  {
+    "category_id": "13",
+    "category_name": "C • FILMES & SERIES",
+    "parent_id": 0
+  },
+  {
+    "category_id": "29",
+    "category_name": "C • ⚽ PARAMOUNT +",
+    "parent_id": 0
+  },
+  {
+    "category_id": "30",
+    "category_name": "C • ⚽ MAX",
+    "parent_id": 0
+  },
+  {
+    "category_id": "31",
+    "category_name": "C • ⚽ PRIME VIDEO",
+    "parent_id": 0
+  },
+  {
+    "category_id": "47",
+    "category_name": "C • 24H DESENHOS/ANIMES*",
+    "parent_id": 0
+  },
+  {
+    "category_id": "48",
+    "category_name": "C • 24H DESENHOS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "49",
+    "category_name": "C • XXX ONLYFANS | PRIVACY",
+    "parent_id": 0
+  },
+  {
+    "category_id": "50",
+    "category_name": "C • XXX BRASILEIRINHAS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "51",
+    "category_name": "C • XXX ADULTOS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "46",
+    "category_name": "C • INFANTIS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "45",
+    "category_name": "Organizar categorias",
+    "parent_id": 0
+  },
+  {
+    "category_id": "44",
+    "category_name": "C • PORTUGAL",
+    "parent_id": 0
+  },
+  {
+    "category_id": "32",
+    "category_name": "C • ⚽ SPORTYNET",
+    "parent_id": 0
+  },
+  {
+    "category_id": "33",
+    "category_name": "C • NBA",
+    "parent_id": 0
+  },
+  {
+    "category_id": "34",
+    "category_name": "C • NETFLIX",
+    "parent_id": 0
+  },
+  {
+    "category_id": "35",
+    "category_name": "C • CINE SKY",
+    "parent_id": 0
+  },
+  {
+    "category_id": "36",
+    "category_name": "C • 24H FILMES",
+    "parent_id": 0
+  },
+  {
+    "category_id": "37",
+    "category_name": "C • 24H SERIES",
+    "parent_id": 0
+  },
+  {
+    "category_id": "38",
+    "category_name": "C • 24H DISCOVERY",
+    "parent_id": 0
+  },
+  {
+    "category_id": "39",
+    "category_name": "C • 24H DORAMAS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "40",
+    "category_name": "C • 24H VARIADOS",
+    "parent_id": 0
+  },
+  {
+    "category_id": "41",
+    "category_name": "C • 24H LIVES",
+    "parent_id": 0
+  },
+  {
+    "category_id": "42",
+    "category_name": "C • 24H Musicas",
+    "parent_id": 0
+  },
+  {
+    "category_id": "43",
+    "category_name": "C • RÁDIO",
+    "parent_id": 0
+  }
+]

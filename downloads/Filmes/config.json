@@ -1,0 +1,17 @@
+{
+    "api_id": "22594796",
+    "api_hash": "ef1f82927273518ebb576665d7c63a55",
+    "bot_token": "7841662461:AAFF3IVLx21SuyHsaGbfkFHGWCPPJVq0TLI",
+    "chat_id": "1404280160",
+
+    
+    "download_dir": "downloads",
+    "json_file": "movies.json",
+    "log_file": "download_log.txt",
+    
+    "max_retries": 3,
+    "chunk_size": 10485760,
+    "concurrent_downloads": 2,
+    "upload_timeout": 3600,
+    "workers": 2
+}

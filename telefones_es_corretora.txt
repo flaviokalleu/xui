@@ -1,0 +1,285 @@
+Empresa: Escorretora
+Total de tickets: 279
+Telefones unicos: 279
+==================================================
+Ticket     Status     Nome                           Telefone
+--------------------------------------------------
+4489       open       Sarah                          556195956316
+4490       open       Eu                             556194297582
+4491       pending    447710173736                   447710173736
+4493       open       Flavio                         556196080740
+4552       open       556183738297                   556183738297
+4612       open       .                              556192799192
+4613       open       Doriene Dias                   556199211993
+4614       open       werbth. Sávio 😎                556384841213
+4615       open       Lucy 🥰                         556185822459
+4617       open       Lucineide Lopes                556196199025
+4619       open       ManuDoCorteDC 🩵                556193195251
+4621       open       Maria                          556198221926
+4622       open       Esquerdinha😃                   556194538194
+4623       open       Karla Vanessa 🦋                556184243382
+4625       open       Superlav                       556191926339
+4627       open       kekeziinhaah                   556183714674
+5190       open       lopes__061                     556199484266
+5192       open       o senhor Deus me erguerá       556193793033
+5193       open       JONATHAN SANTANA🙌🏻             556198375669
+5195       open       RCS                            556198431819
+5196       open       Damiana Ferreira               556195290797
+5197       open       Heide ❤️                       556192573568
+5199       open       Rafaela Oliveira               556184135721
+5201       open       .                              556196120306
+5205       open       wellyton Santana               556185092039
+5207       open       manoell messi /DF              556195569481
+5212       open       Antônio Messias                556182851486
+5213       open       vyctorgabriel29                556193358119
+5215       open       Romário                        553488668577
+5218       open       Marquinho PG                   556194415670
+5219       open       🙌                              556195069123
+5221       open       🗿🍷                             556193296677
+5226       open       J                              556193090143
+5228       open       556193053330                   556193053330
+5234       open       Adaoedson                      556196944566
+5235       open       Joao Alves                     556191880063
+5236       open       Dudu' jdf                      556198517036
+5241       open       🥰                              556199298410
+5242       open       Eliane 💋                       556195802285
+5245       open       🥇🍀🤩                            556195004755
+5246       open       Eduardo Rocha                  556198080839
+5247       open       Karlione Rodrigues             556194586200
+5251       open       lucas santos                   556192676870
+5252       open       🥰🥰🥰                            556195935745
+5255       open       Adriele                        556194474895
+5258       open       Carlos Alfa                    556185255766
+5260       open       Renato                         556181186342
+5266       open       Juvenildasilva120 Juvenil      556192388817
+5274       open       Adriana (Dricka)🤪😍🥰😅           556193708338
+5277       open       Deuzimar                       556192928372
+5280       open       drdserralheriaemgeral.com      556185688768
+5281       open       Brindado Por Deus              556198164110
+5285       open       Mara                           556195851164
+5292       open       Rosa                           556181082970
+5296       open       Wesley                         556192763855
+5299       open       Suzany                         556195058501
+5300       open       emanuelcampello1996            556198060359
+5303       open       Luana                          556191090095
+5306       open       eletricacj79                   556195206807
+5307       open       Gisele                         556181746058
+5308       open       herick                         556182233494
+5310       open       💕rosilene                      556191880672
+5311       open       Junior                         556185320695
+5312       open       Suelen                         556195813141
+5313       open       Joao                           556199587726
+5316       open       angel😘                         556193396120
+5323       open       gloria solteira                556193235952
+5331       open       556198276172                   556198276172
+5334       open       J.A BRAGA                      556186442500
+5342       open       Maluh                          556192512272
+5348       open       🥰                              556184441796
+5358       open       -Nunes                         556196922726
+5359       open       Aldinha❤️ Sophia               556193755949
+5361       open       Audelita Lima                  556183810561
+5362       open       Khan                           556192512435
+5367       open       L.A.V.S❤️❤️❤️❤️❤️❤️            556191563027
+5369       open       Netinha 🕊️                     556182188725
+5374       open       Cleson Soares                  556191488006
+5377       open       landiin                        556199603249
+5378       open       pretinha ❤️❤️❤️                556196304162
+5379       open       Demersonth                     556192576825
+5380       open       Vera                           556191066847
+5381       open       Ribeiro 💭                      556192363609
+5382       open       🥰😘                             556193801421
+5385       open       pino                           551167007078
+5388       open       ch                             556182794811
+5389       open       Juliana Queiróz Silva          556185379337
+5390       open       Emilene                        556182435168
+5392       open       Abimael                        556194604200
+5394       open       M                              556192530281
+5395       open       Edson                          556182041374
+5396       open       😎🇧🇷                            552165474594
+5397       open       𝐊𝐚𝐫𝐲𝐧𝐚 𝐒𝐢𝐥𝐯𝐚 🏳️‍🌈              556194328007
+5399       open       BEVAL                          556192593890
+5401       open       Bryan Laura Kaua 🤴🏻🫅🏻🤴🏻        556183367352
+5402       open       Anderson Santos                556196574199
+5405       open       alessandrotayrone              556191110371
+5406       open       Vinícius                       556198797928
+5407       open       Curujinha                      556181302619
+5408       open       elieuda                        556182329712
+5410       open       Daniel                         556196420208
+5412       open       igryte                         556195838770
+5413       open       Cleuber Vasques                556185216818
+5417       open       Eduardo Melo                   556194645047
+5418       open       Chaguinha                      556193682020
+5420       open       Guerreira💪                     556198709233
+5422       open       Junior Santos barros🌻🌻🌻        556191673099
+5425       open       Helton                         556182166040
+5428       open       Raay                           556199121389
+5430       open       Catiana Cristina               556192823707
+5434       open       Luciana ☢️🩻. ⚕️🥼🩺              556182127894
+5435       open       Adriana                        556198394437
+5436       open       Jesus Salvador                 556198190063
+5437       open       556194438266                   556194438266
+5442       open       🦍                              556198516943
+5445       open       kell                           556192800042
+5448       open       Denice pinto                   556181571430
+5451       open       Reginaldo                      556181281022
+5452       open       .                              556181939969
+5453       open       Abençoado Por Deus             556196674917
+5454       open       Leandro                        556174021735
+5455       open       João Vitor Andrade             556181629452
+5457       open       pereiradossantoshugo197        556193659760
+5458       open       fatison martins!               556185498195
+5459       open       Alessandra Santos              556192914200
+5460       open       Cleber Moitinho                556182335710
+5461       open       Raimundo Nascimento Lima⚽      556186011788
+5463       open       Katia Simone                   556493144122
+5464       open       D❤️🌹❤️                         556192707574
+5465       open       Diego Silva                    556198909693
+5473       open       Sebastião Rezende              556199498980
+5474       open       ❤️DEUS É FIEL!!!❤️🙋🏼‍♀️🤩       556194034048
+5475       open       Jaciara Vieira                 556181453667
+5480       open       556194574604                   556194574604
+5482       open       naison                         556193746030
+5483       open       Davi                           556198303148
+5485       open       kesia maria                    556181427396
+5489       open       mary❤️                         556192393387
+5490       open       Vagner Silva                   556181784316
+5493       open       Raquel                         556198414104
+5496       open       556192899562                   556192899562
+5497       open       Milezinha 😈                    556181461586
+5498       open       rb                             556182407792
+5499       open       R                              556196048744
+5501       open       Daniel Santos                  556183350663
+5503       open       fagna Thaynara                 556195005770
+5504       open       Ricardo Amaral                 556184834159
+5505       open       ❤️                             556198096298
+5506       open       Sueide                         556199788943
+5508       open       LaraNeres🙂                     556182645985
+5511       open       Jefferson                      556191432321
+5512       open       Nadja Nara                     Manicure & Pedicure
+5514       open       hoffmancoelhooliveira          556184365864
+5515       open       Ícaro                          556199938270
+5516       open       andreedsonoliveirarocha13      558981527576
+5521       open       Raiane Magalhães               556192793970
+5522       open       Erivelton Silva 😎              556195994728
+5523       open       ❤️🙏🏻🫠😎👌🏻👀                      556183334547
+5524       open       Marcos                         556193102935
+5528       open       wandsonroma006                 556191052224
+5532       open       Stephany                       556191921304
+5534       open       .                              556194538679
+5535       open       Daniel                         556182120856
+5537       open       Marluce Única 😻                556192358658
+5538       open       MISS: ELINALDO DA SILVA        556198572867
+5540       open       Maria Aparecida Cida           556190005948
+5541       open       Sanne                          556182117462
+5549       open       Henrique                       556191925133
+5555       open       manuaugusto881                 556194247957
+5563       open       👷🏽‍♂️😎                         556181813834
+5566       open       Adilson                        556186678475
+5567       open       🫢                              556193098998
+5574       open       Edina Cristina                 556199154255
+5575       open       556185824192                   556185824192
+5588       open       Marcio martins                 556186382132
+5594       open       Katia Lima                     556198421514
+5596       open       Yara❤️                         556195924796
+5598       open       Claudia Lisboa                 556198697328
+5600       open       ꧁❦𝑅𝑂𝑆𝐴 𝐷𝐴𝐿𝐼𝐴 ❦꧂                556196329327
+5601       open       Nayane                         556195009925
+5602       open       Mira 🌸🌕                        556186395885
+5883       open       Lu                             556185839736
+5886       open       556193147257                   556193147257
+5889       open       Leila                          556191955080
+5890       open       marcosgarcia123souza           556194110975
+5891       open       Fabrício                       556181683589
+5893       open       Francisca                      556199287529
+5899       open       Fabiana Miguel Camila Wil      556199144417
+5902       open       Denilda                        556195025328
+5903       open       fabricio                       556194340270
+5904       open       Gabryela 🙏🏼🥰💋                  556186384874
+5905       open       Dielton Oliveira               556195199213
+5906       open       Maranhense🦁                    556192353961
+5909       open       Louvane Ferreira❤️             556192756274
+5911       open       Jessica                        556181525944
+5912       open       👫                              556196859945
+5916       open       Michelle                       556181063958
+5917       open       Fabio Santana                  556193382155
+6424       open       DEL 🍀🌻 5207418                 556193001047
+6426       open       🙏🏼🙌🏻                           556192213688
+6428       open       Vani Teles                     556284715866
+6429       open       Nelma                          556181878913
+6431       open       Alexandre                      556185399441
+6433       open       jotadeoliveira 3               556198794923
+6434       open       Tauane                         556198089613
+6438       open       Lourdes S Borges               556198299437
+6441       open       Wagner Castro Sales            556192744127
+6444       open       Ronaldo Silva                  556196970902
+6449       open       Denise leao                    556185324106
+6451       open       Rafael                         556182145394
+6452       open       Fabio😘                         556195052129
+6453       open       Raison Castro                  556193197101
+6454       open       Naudivan                       556191033383
+6455       open       Cleane Gomes Oliveira          556184733953
+6457       open       valdenicio nascimento dia      556195042735
+6458       open       .                              556182205975
+6459       open       Rosangela                      556192058410
+6460       open       Wesley                         556186313468
+6462       open       Paulo                          556181533598
+6465       open       😶‍🌫️                           551141602102
+6467       open       denismessias2010               556196787048
+6470       open       Lucas docas                    556181497664
+6471       open       Jenevaldo Ramos Soares         556191579778
+6477       open       559870035360                   559870035360
+6480       open       Mariana                        556185314993
+6484       open       David Azul Piscina             556184638313
+6491       open       Japinha Mecânica               556184187254
+6492       open       Bia Pinheiro                   556184026128
+6494       open       Antônia 🌸                      556199865675
+6496       open       Raquel Maia                    556194316585
+6497       open       Rodrigo                        556196447021
+6498       open       cesrino                        556181720642
+6503       open       Edlene Da Silva Gomes          556194317911
+6504       open       061_neguin                     556198132500
+6505       open       Diogo Rodrigues                556182119350
+6507       open       Karine                         556192388636
+6509       open       E Nós                          556192066946
+6511       open       Mauricio                       556198551912
+6515       open       Raquel                         556184787017
+6517       open       .                              559984029472
+6519       open       Montanha                       556192012366
+6520       open       Osmarina Anjinho do nasci      556198881246
+6522       open       556196510066                   556196510066
+6523       open       Paulo                          556195269506
+6526       open       FOGAÇA                         556199593843
+6530       open       Thamara                        556192035759
+6532       open       Marília Cecília🌸               556194232696
+6533       open       Deus Pai todo poderoso         556191550905
+6535       open       556181045327                   556181045327
+6537       open       Rose                           556199198652
+6538       open       Elisangela Rodrigues 🌹😇        556199352608
+6539       open       Valeria                        556198416644
+6540       open       Online                         556195838583
+6541       open       mercado livre                  556192821956
+6542       open       Waldenir Morais                556198542877
+6545       open       Duarte                         556199422039
+6546       open       😍😍😍                            556181884924
+6547       open       shirlenemaria2009              556185088293
+6549       open       556184814127                   556184814127
+6552       open       ㅤㅤㅤ                            556194624941
+6553       open       Estela                         556181877840
+6556       open       pequena                        556184628378
+6557       open       556193771162                   556193771162
+6558       open       ....                           556181910096
+6560       open       .                              556193855685
+6561       open       CLEIA                          556195058690
+6562       open       paulo1goncalves1222            556182374749
+6563       open       Clebson Dorneles               556183648229
+6564       open       kauã                           556199254208
+6565       open       MARCOS rodrigues de souza      556191716111
+6568       open       Ramon                          556192801863
+6569       open       Batista Armações               556194164833
+6570       open       Demetrio                       556183187318
+6572       open       Turcojan                       556193117982
+6578       open       Ronailton Isidio               556194232042
+6579       open       💚🤍💚🤍                           556193855312
+6580       open       Rosama                         556181058787
+6582       open       vivizinha                      556182015479
+16523      pending    556198460236                   556198460236

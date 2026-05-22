@@ -1,0 +1,37 @@
+2025-02-26 21:35:19,237 - __main__ - INFO - Cliente Telegram inicializado com sucesso
+2025-02-26 21:35:19,922 - __main__ - INFO - Encontrado novo TMDB ID: 240022
+2025-02-26 21:35:19,926 - __main__ - INFO - Iniciando download do episódio 240022_S01E01
+2025-02-26 21:35:22,325 - __main__ - INFO - Iniciando upload do episódio 240022_S01E01
+2025-02-26 21:37:30,127 - __main__ - ERROR - Erro no upload: Telegram says: [400 USER_IS_BOT] - A bot cannot send messages to other bots or to itself (caused by "messages.SendMedia")
+2025-02-26 21:37:30,132 - __main__ - INFO - Arquivo 240022_S01E01.mp4 removido do disco
+2025-02-26 21:37:30,134 - __main__ - INFO - Iniciando download do episódio 240022_S01E02
+2025-02-26 21:37:32,681 - __main__ - INFO - Iniciando upload do episódio 240022_S01E02
+2025-02-26 21:37:40,219 - __main__ - INFO - Iniciando download do episódio 240022_S01E03
+2025-02-26 21:37:40,692 - __main__ - ERROR - Erro na limpeza: sys.meta_path is None, Python is likely shutting down
+2025-02-26 21:42:29,245 - __main__ - INFO - Cliente Telegram inicializado com sucesso
+2025-02-26 21:42:29,391 - __main__ - INFO - Recursos limpos com sucesso
+2025-02-26 21:42:40,867 - __main__ - INFO - Cliente Telegram inicializado com sucesso
+2025-02-26 21:42:41,165 - __main__ - INFO - Encontrado novo TMDB ID: 240022
+2025-02-26 21:42:41,167 - __main__ - INFO - Iniciando download do episódio 240022_S01E01
+2025-02-26 21:42:42,321 - __main__ - INFO - Aguardando 15 segundos para estabilização da velocidade...
+2025-02-26 21:42:43,576 - __main__ - INFO - Iniciando upload do episódio 240022_S01E01
+2025-02-26 21:43:41,566 - __main__ - INFO - Cliente Telegram inicializado com sucesso
+2025-02-26 21:43:41,891 - __main__ - INFO - Encontrado novo TMDB ID: 240022
+2025-02-26 21:43:41,893 - __main__ - INFO - Iniciando download do episódio 240022_S01E01
+2025-02-26 21:43:43,067 - __main__ - INFO - Aguardando 15 segundos para estabilização da velocidade...
+2025-02-26 21:43:44,656 - __main__ - INFO - Iniciando upload do episódio 240022_S01E01
+2025-02-26 21:46:24,103 - __main__ - ERROR - Erro no upload: Telegram says: [400 USER_IS_BOT] - A bot cannot send messages to other bots or to itself (caused by "messages.SendMedia")
+2025-02-26 21:46:24,109 - __main__ - INFO - Arquivo 240022_S01E01.mp4 removido do disco
+2025-02-26 21:46:24,112 - __main__ - INFO - Iniciando download do episódio 240022_S01E02
+2025-02-26 21:46:29,331 - __main__ - INFO - Aguardando 15 segundos para estabilização da velocidade...
+2025-02-26 21:46:36,918 - __main__ - ERROR - Erro na limpeza: Event loop is closed
+2025-02-26 21:47:50,409 - __main__ - INFO - Cliente Telegram inicializado com sucesso
+2025-02-26 21:47:50,621 - __main__ - INFO - Encontrado novo TMDB ID: 240022
+2025-02-26 21:47:50,623 - __main__ - INFO - Iniciando download do episódio 240022_S01E01
+2025-02-26 21:47:51,844 - __main__ - INFO - Aguardando 15 segundos para estabilização da velocidade...
+2025-02-26 21:47:53,244 - __main__ - INFO - Iniciando upload do episódio 240022_S01E01
+2025-02-26 21:50:04,476 - __main__ - ERROR - Erro no upload: Telegram says: [400 USER_IS_BOT] - A bot cannot send messages to other bots or to itself (caused by "messages.SendMedia")
+2025-02-26 21:50:04,483 - __main__ - INFO - Arquivo 240022_S01E01.mp4 removido do disco
+2025-02-26 21:50:04,484 - __main__ - INFO - Iniciando download do episódio 240022_S01E02
+2025-02-26 21:50:05,460 - __main__ - INFO - Aguardando 15 segundos para estabilização da velocidade...
+2025-02-26 21:50:07,364 - __main__ - INFO - Iniciando upload do episódio 240022_S01E02

@@ -1,0 +1,95 @@
+{
+  "seasons": [],
+  "info": {
+    "name": "Pela Metade (2026) (2026)",
+    "title": "Pela Metade (2026)",
+    "year": "2026",
+    "cover": "http://image.tmdb.org/t/p/w300/j6TXud3kXLyqZrPyVwtkIVs8mXd.jpg",
+    "plot": "A trama mostra o repentino aparecimento de Ruben no casamento de Niall, irmão com quem não falava há anos. A partir daí, a produção vai examinar os altos e baixos da turbulenta relação entre ",
+    "cast": "Jamie Bell, Richard Gadd, Mitchell Robertson, Stuart Campbell",
+    "director": "",
+    "genre": "Drama, Mistério",
+    "release_date": "2026-04-28",
+    "releaseDate": "2026-04-28",
+    "last_modified": "1778635479",
+    "rating": "9",
+    "rating_5based": 4.5,
+    "backdrop_path": null,
+    "youtube_trailer": null,
+    "episode_run_time": "0",
+    "category_id": "130",
+    "category_ids": [
+      130
+    ]
+  },
+  "episodes": {
+    "1": [
+      {
+        "id": "252751",
+        "episode_num": "1",
+        "title": "Pela Metade S01E01",
+        "container_extension": null,
+        "info": {
+          "name": "Pela Metade S01E01",
+          "o_name": "Pela Metade S01E01",
+          "movie_image": "http://image.tmdb.org/t/p/w300/j6TXud3kXLyqZrPyVwtkIVs8mXd.jpg",
+          "cover_big": "http://image.tmdb.org/t/p/w300/j6TXud3kXLyqZrPyVwtkIVs8mXd.jpg",
+          "plot": "A trama mostra o repentino aparecimento de Ruben no casamento de Niall, irmão com quem não falava há anos. A partir daí, a produção vai examinar os altos e baixos da turbulenta relação entre ",
+          "description": "A trama mostra o repentino aparecimento de Ruben no casamento de Niall, irmão com quem não falava há anos. A partir daí, a produção vai examinar os altos e baixos da turbulenta relação entre ",
+          "series_id": 8861,
+          "season": 1,
+          "episode": 1
+        },
+        "subtitles": [],
+        "custom_sid": "",
+        "added": "1778635480",
+        "season": 1,
+        "direct_source": ""
+      },
+      {
+        "id": "253202",
+        "episode_num": "2",
+        "title": "Pela Metade S01E02",
+        "container_extension": null,
+        "info": {
+          "name": "Pela Metade S01E02",
+          "o_name": "Pela Metade S01E02",
+          "movie_image": "http://image.tmdb.org/t/p/w300/j6TXud3kXLyqZrPyVwtkIVs8mXd.jpg",
+          "cover_big": "http://image.tmdb.org/t/p/w300/j6TXud3kXLyqZrPyVwtkIVs8mXd.jpg",
+          "plot": "A trama mostra o repentino aparecimento de Ruben no casamento de Niall, irmão com quem não falava há anos. A partir daí, a produção vai examinar os altos e baixos da turbulenta relação entre ",
+          "description": "A trama mostra o repentino aparecimento de Ruben no casamento de Niall, irmão com quem não falava há anos. A partir daí, a produção vai examinar os altos e baixos da turbulenta relação entre ",
+          "series_id": 8861,
+          "season": 1,
+          "episode": 2
+        },
+        "subtitles": [],
+        "custom_sid": "",
+        "added": "1778635480",
+        "season": 1,
+        "direct_source": ""
+      },
+      {
+        "id": "255599",
+        "episode_num": "3",
+        "title": "Pela Metade S01E03",
+        "container_extension": null,
+        "info": {
+          "name": "Pela Metade S01E03",
+          "o_name": "Pela Metade S01E03",
+          "movie_image": "http://image.tmdb.org/t/p/w300/j6TXud3kXLyqZrPyVwtkIVs8mXd.jpg",
+          "cover_big": "http://image.tmdb.org/t/p/w300/j6TXud3kXLyqZrPyVwtkIVs8mXd.jpg",
+          "plot": "A trama mostra o repentino aparecimento de Ruben no casamento de Niall, irmão com quem não falava há anos. A partir daí, a produção vai examinar os altos e baixos da turbulenta relação entre ",
+          "description": "A trama mostra o repentino aparecimento de Ruben no casamento de Niall, irmão com quem não falava há anos. A partir daí, a produção vai examinar os altos e baixos da turbulenta relação entre ",
+          "series_id": 8861,
+          "season": 1,
+          "episode": 3
+        },
+        "subtitles": [],
+        "custom_sid": "",
+        "added": "1778635480",
+        "season": 1,
+        "direct_source": ""
+      }
+    ]
+  }
+}
