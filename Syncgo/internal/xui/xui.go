@@ -1,4 +1,4 @@
-// Package xui implements MySQL operations for an XtreamUI / XUI ONE panel.
+// Package xui implements MySQL operations for the PB&Ctv/Xtream panel.
 package xui
 
 import (
@@ -57,7 +57,7 @@ func (d *DB) Close() error { return d.conn.Close() }
 func (d *DB) GetOrCreateCategory(ctx context.Context, name, categoryType string) (int64, error) {
 	var id int64
 	err := d.conn.QueryRowContext(ctx,
-		`SELECT id FROM streams_categories WHERE category_name = ? AND category_type = ? LIMIT 1`,
+		`SELECT id FROM categoria WHERE nome = ? AND type = ? LIMIT 1`,
 		name, categoryType).Scan(&id)
 	if err == nil {
 		return id, nil
@@ -65,10 +65,15 @@ func (d *DB) GetOrCreateCategory(ctx context.Context, name, categoryType string)
 	if err != sql.ErrNoRows {
 		return 0, err
 	}
+	var position int64
+	_ = d.conn.QueryRowContext(ctx,
+		`SELECT COALESCE(MAX(position) + 1, 0) FROM categoria WHERE type = ?`,
+		categoryType).Scan(&position)
+
 	res, err := d.conn.ExecContext(ctx,
-		`INSERT INTO streams_categories (category_type, category_name, parent_id, cat_order, is_adult)
-		 VALUES (?, ?, 0, 0, 0)`,
-		categoryType, name)
+		`INSERT INTO categoria (nome, type, parent_id, is_adult, admin_id, position)
+		 VALUES (?, ?, 0, 0, 0, ?)`,
+		name, categoryType, position)
 	if err != nil {
 		return 0, fmt.Errorf("insert category %q: %w", name, err)
 	}
@@ -76,13 +81,12 @@ func (d *DB) GetOrCreateCategory(ctx context.Context, name, categoryType string)
 	if err != nil {
 		return 0, err
 	}
-	_, _ = d.conn.ExecContext(ctx, `UPDATE streams_categories SET cat_order = id WHERE id = ?`, newID)
 	return newID, nil
 }
 
 // PreloadCategories returns existing categories keyed by "type|name".
 func (d *DB) PreloadCategories(ctx context.Context) (map[string]int64, error) {
-	rows, err := d.conn.QueryContext(ctx, `SELECT id, category_name, category_type FROM streams_categories`)
+	rows, err := d.conn.QueryContext(ctx, `SELECT id, nome, type FROM categoria`)
 	if err != nil {
 		return nil, err
 	}
@@ -106,11 +110,33 @@ func languageOrDefault(lang string) string {
 	return "pt-BR"
 }
 
-func categoryIDsJSON(ids []int64) string {
+func firstCategoryID(ids []int64) any {
 	if len(ids) == 0 {
+		return nil
+	}
+	return ids[0]
+}
+
+func durationHMS(minutes int) string {
+	if minutes <= 0 {
+		return ""
+	}
+	return fmt.Sprintf("%02d:%02d:00", minutes/60, minutes%60)
+}
+
+func rating5(r float64) string {
+	if r <= 0 {
+		return ""
+	}
+	return strconv.FormatFloat(r/2, 'f', 1, 64)
+}
+
+func backdropJSON(path string) string {
+	url := tmdb.BackdropURL(path)
+	if url == "" {
 		return "[]"
 	}
-	out, _ := json.Marshal(ids)
+	out, _ := json.Marshal([]string{url})
 	return string(out)
 }
 
@@ -156,8 +182,7 @@ func (d *DB) GetOrCreateBouquet(ctx context.Context, name string) (int64, error)
 		return 0, err
 	}
 	res, err := d.conn.ExecContext(ctx,
-		`INSERT INTO bouquets (bouquet_name, bouquet_channels, bouquet_movies, bouquet_radios, bouquet_series, bouquet_order)
-		 VALUES (?, '[]', '[]', '[]', '[]', 1)`, name)
+		`INSERT INTO bouquets (bouquet_name) VALUES (?)`, name)
 	if err != nil {
 		return 0, fmt.Errorf("insert bouquet %q: %w", name, err)
 	}
@@ -169,30 +194,23 @@ func (d *DB) AddToBouquet(ctx context.Context, bouquetID int64, field bouquetFie
 	if len(ids) == 0 {
 		return nil
 	}
-	var raw sql.NullString
-	if err := d.conn.QueryRowContext(ctx,
-		fmt.Sprintf("SELECT %s FROM bouquets WHERE id = ?", field), bouquetID).Scan(&raw); err != nil {
-		return err
-	}
-	current := []int64{}
-	if raw.Valid && raw.String != "" {
-		_ = json.Unmarshal([]byte(raw.String), &current)
-	}
-	seen := make(map[int64]bool, len(current)+len(ids))
-	for _, x := range current {
-		seen[x] = true
-	}
+	_ = field
 	for _, x := range ids {
-		if !seen[x] {
-			current = append(current, x)
-			seen[x] = true
+		var exists int
+		if err := d.conn.QueryRowContext(ctx,
+			`SELECT 1 FROM bouquet_items WHERE bouquet_id = ? AND category_id = ? LIMIT 1`,
+			bouquetID, x).Scan(&exists); err != nil && err != sql.ErrNoRows {
+			return err
+		}
+		if exists == 0 {
+			if _, err := d.conn.ExecContext(ctx,
+				`INSERT INTO bouquet_items (bouquet_id, category_id) VALUES (?, ?)`,
+				bouquetID, x); err != nil {
+				return err
+			}
 		}
 	}
-	out, _ := json.Marshal(current)
-	_, err := d.conn.ExecContext(ctx,
-		fmt.Sprintf("UPDATE bouquets SET %s = ? WHERE id = ?", field),
-		string(out), bouquetID)
-	return err
+	return nil
 }
 
 // ---------- streams (movies / channels) ----------
@@ -220,7 +238,7 @@ type Movie struct {
 
 func (d *DB) MovieExists(ctx context.Context, tmdbID int64) (int64, bool, error) {
 	var id int64
-	err := d.conn.QueryRowContext(ctx, `SELECT id FROM streams WHERE tmdb_id = ? AND type = 2 LIMIT 1`, tmdbID).Scan(&id)
+	err := d.conn.QueryRowContext(ctx, `SELECT id FROM streams WHERE tmdb_id = ? AND stream_type = 'movie' LIMIT 1`, tmdbID).Scan(&id)
 	if err == sql.ErrNoRows {
 		return 0, false, nil
 	}
@@ -231,29 +249,30 @@ func (d *DB) MovieExists(ctx context.Context, tmdbID int64) (int64, bool, error)
 }
 
 func (d *DB) InsertMovie(ctx context.Context, m Movie) (int64, error) {
-	props := movieProperties(m)
-	propsJSON, _ := json.Marshal(props)
-	streamSource, _ := json.Marshal([]string{m.StreamSource})
 	added := time.Now().Unix()
 	poster := tmdb.PosterURL(m.PosterPath)
+	runtimeSeconds := 0
+	if m.RuntimeMinutes > 0 {
+		runtimeSeconds = m.RuntimeMinutes * 60
+	}
 
 	res, err := d.conn.ExecContext(ctx, `
 		INSERT INTO streams (
-			type, category_id, stream_display_name, stream_source, stream_icon, notes,
-			enable_transcode, transcode_attributes, custom_ffmpeg, movie_properties, movie_subtitles,
-			read_native, target_container, stream_all, remove_subtitles, custom_sid, epg_api, epg_id,
-			channel_id, epg_lang, ` + "`order`" + `, auto_restart, transcode_profile_id, gen_timestamps, added,
-			series_no, direct_source, tv_archive_duration, tv_archive_server_id, tv_archive_pid,
-			vframes_server_id, vframes_pid, movie_symlink, rtmp_output, allow_record, probesize_ondemand,
-			custom_map, external_push, delay_minutes, tmdb_language, llod, year, rating, plex_uuid, uuid,
-			epg_offset, updated, similar, tmdb_id, adaptive_link, title_sync, fps_restart, fps_threshold, direct_proxy
+			situacao, tipo_link, link, name, year, stream_type, stream_icon,
+			rating, rating_5based, added, category_id, container_extension,
+			kinopoisk_url, tmdb_id, cover_big, release_date, episode_run_time,
+			youtube_trailer, director, actors, cast, description, plot, country,
+			genre, backdrop_path, duration_secs, duration, releasedate, is_adult
 		) VALUES (
-			2, ?, ?, ?, ?, NULL, 0, NULL, NULL, ?, NULL, 0, 'mp4', 0, 0, NULL, 0, NULL, NULL, NULL,
-			NULL, NULL, 0, 1, ?, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 128000, NULL, NULL, 0, ?, 0, ?, ?,
-			'', NULL, 0, '0000-00-00 00:00:00', NULL, ?, NULL, NULL, 0, 90, 1
+			'ativo', 'padrao', ?, ?, ?, 'movie', ?, ?, ?, ?, ?, 'mp4',
+			?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0
 		)`,
-		categoryIDsJSON(m.CategoryIDs), m.Title, string(streamSource), poster,
-		string(propsJSON), added, languageOrDefault(m.Language), m.ReleaseYear, m.Rating, m.TMDBID,
+		m.StreamSource, m.Title, strconv.Itoa(m.ReleaseYear), poster,
+		strconv.FormatFloat(m.Rating, 'f', 1, 64), rating5(m.Rating), strconv.FormatInt(added, 10), firstCategoryID(m.CategoryIDs),
+		fmt.Sprintf("https://www.themoviedb.org/movie/%d", m.TMDBID), strconv.FormatInt(m.TMDBID, 10), poster,
+		m.ReleaseDate, strconv.Itoa(m.RuntimeMinutes), m.Trailer, m.Director, m.Cast, m.Cast,
+		m.Description, m.Description, m.Country, strings.Join(m.Genres, ", "), backdropJSON(m.BackdropPath),
+		strconv.Itoa(runtimeSeconds), durationHMS(m.RuntimeMinutes), m.ReleaseDate,
 	)
 	if err != nil {
 		return 0, fmt.Errorf("insert stream movie: %w", err)
@@ -262,29 +281,13 @@ func (d *DB) InsertMovie(ctx context.Context, m Movie) (int64, error) {
 	if err != nil {
 		return 0, err
 	}
-	if err := d.linkStreamServer(ctx, streamID); err != nil {
-		return 0, err
-	}
 	return streamID, nil
 }
 
 // UpdateMovieSource adds an additional stream URL to an existing movie (or replaces).
 func (d *DB) UpdateMovieSource(ctx context.Context, streamID int64, url string, appendURL bool) error {
-	urls := []string{url}
-	if appendURL {
-		var raw sql.NullString
-		if err := d.conn.QueryRowContext(ctx, `SELECT stream_source FROM streams WHERE id = ?`, streamID).Scan(&raw); err == nil && raw.Valid {
-			var current []string
-			if err := json.Unmarshal([]byte(raw.String), &current); err == nil {
-				urls = appendDedup(current, url)
-			}
-		}
-	}
-	out, err := json.Marshal(urls)
-	if err != nil {
-		return fmt.Errorf("marshal stream_source: %w", err)
-	}
-	_, err = d.conn.ExecContext(ctx, `UPDATE streams SET stream_source = ? WHERE id = ?`, string(out), streamID)
+	_ = appendURL
+	_, err := d.conn.ExecContext(ctx, `UPDATE streams SET link = ? WHERE id = ?`, url, streamID)
 	return err
 }
 
@@ -298,17 +301,8 @@ func appendDedup(s []string, v string) []string {
 }
 
 func (d *DB) linkStreamServer(ctx context.Context, streamID int64) error {
-	_, err := d.conn.ExecContext(ctx, `
-		INSERT INTO streams_servers (
-			stream_id, server_id, parent_id, pid, to_analyze, stream_status,
-			stream_started, stream_info, monitor_pid, aes_pid, current_source,
-			bitrate, progress_info, cc_info, on_demand, delay_pid,
-			delay_available_at, pids_create_channel, cchannel_rsources,
-			updated, compatible, audio_codec, video_codec, resolution, ondemand_check
-		) VALUES (?, ?, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL,
-			NULL, NULL, 0, NULL, NULL, NULL, NULL, NOW(), 0, NULL, NULL, NULL, NULL)`,
-		streamID, d.serverID)
-	return err
+	_, _ = ctx, streamID
+	return nil
 }
 
 func movieProperties(m Movie) map[string]any {
@@ -365,7 +359,7 @@ type Series struct {
 
 func (d *DB) SeriesExists(ctx context.Context, tmdbID int64) (int64, bool, error) {
 	var id int64
-	err := d.conn.QueryRowContext(ctx, `SELECT id FROM streams_series WHERE tmdb_id = ? LIMIT 1`, tmdbID).Scan(&id)
+	err := d.conn.QueryRowContext(ctx, `SELECT id FROM series WHERE tmdb_id = ? LIMIT 1`, tmdbID).Scan(&id)
 	if err == sql.ErrNoRows {
 		return 0, false, nil
 	}
@@ -377,28 +371,26 @@ func (d *DB) SeriesExists(ctx context.Context, tmdbID int64) (int64, bool, error
 
 func (d *DB) InsertSeries(ctx context.Context, s Series) (int64, error) {
 	poster := tmdb.PosterURL(s.PosterPath)
-	backdrops, _ := json.Marshal([]string{tmdb.BackdropURL(s.BackdropPath)})
-
 	res, err := d.conn.ExecContext(ctx, `
-		INSERT INTO streams_series (
-			title, category_id, cover, cover_big, genre, plot, cast, rating, director,
-			release_date, last_modified, tmdb_id, seasons, episode_run_time,
-			backdrop_path, youtube_trailer, tmdb_language, year, plex_uuid, similar
-		) VALUES (?, ?, ?, ?, ?, ?, ?, ?, '', ?, ?, ?, '', 0, ?, '', ?, ?, '', '')`,
+		INSERT INTO series (
+			name, category_id, year, stream_type, cover, plot, cast, director, genre,
+			release_date, releaseDate, last_modified, rating, rating_5based,
+			backdrop_path, youtube_trailer, episode_run_time, tmdb_id, is_adult
+		) VALUES (?, ?, ?, 'series', ?, ?, ?, '', ?, ?, ?, ?, ?, ?, ?, '', '', ?, 0)`,
 		s.Title,
-		categoryIDsJSON(s.CategoryIDs),
+		firstCategoryID(s.CategoryIDs),
+		strconv.Itoa(s.Year),
 		poster,
-		poster,
-		strings.Join(s.Genres, ", "),
 		s.Description,
 		s.Cast,
-		s.Rating,
+		strings.Join(s.Genres, ", "),
+		s.FirstAirDate,
 		s.FirstAirDate,
 		time.Now().Unix(),
+		strconv.FormatFloat(s.Rating, 'f', 1, 64),
+		rating5(s.Rating),
+		backdropJSON(s.BackdropPath),
 		s.TMDBID,
-		string(backdrops),
-		s.Language,
-		s.Year,
 	)
 	if err != nil {
 		return 0, fmt.Errorf("insert series: %w", err)
@@ -424,11 +416,9 @@ type Episode struct {
 
 func (d *DB) EpisodeExists(ctx context.Context, seriesID int64, season, episode int) (int64, bool, error) {
 	var id int64
-	// Usa streams_episodes para filtrar por series_id — evita falsos positivos
-	// quando duas séries diferentes têm o mesmo número de temporada/episódio.
 	err := d.conn.QueryRowContext(ctx,
-		`SELECT se.stream_id FROM streams_episodes se
-		 WHERE se.series_id = ? AND se.season_num = ? AND se.episode_num = ? LIMIT 1`,
+		`SELECT id FROM series_episodes
+		 WHERE series_id = ? AND season = ? AND episode_num = ? LIMIT 1`,
 		seriesID, season, episode).Scan(&id)
 	if err == sql.ErrNoRows {
 		return 0, false, nil
@@ -440,22 +430,10 @@ func (d *DB) EpisodeExists(ctx context.Context, seriesID int64, season, episode 
 }
 
 func (d *DB) InsertEpisode(ctx context.Context, e Episode) (int64, error) {
-	streamSource, _ := json.Marshal([]string{e.StreamURL})
 	poster := tmdb.StillURL(e.PosterPath)
-	movieProps := map[string]any{
-		"name":             e.Title,
-		"plot":             e.Plot,
-		"description":      e.Plot,
-		"release_date":     e.AirDate,
-		"episode_run_time": strconv.Itoa(e.Runtime),
-		"duration":         fmt.Sprintf("%02d:%02d:00", e.Runtime/60, e.Runtime%60),
-		"duration_secs":    e.Runtime * 60,
-		"rating":           strconv.FormatFloat(e.Rating, 'f', 1, 64),
-		"movie_image":      poster,
-		"cover_big":        poster,
-	}
-	propsJSON, _ := json.Marshal(movieProps)
 	added := time.Now().Unix()
+	var categoryID sql.NullInt64
+	_ = d.conn.QueryRowContext(ctx, `SELECT category_id FROM series WHERE id = ?`, e.SeriesID).Scan(&categoryID)
 
 	displayName := e.Title
 	if displayName == "" {
@@ -463,35 +441,23 @@ func (d *DB) InsertEpisode(ctx context.Context, e Episode) (int64, error) {
 	}
 
 	res, err := d.conn.ExecContext(ctx, `
-		INSERT INTO streams (
-			type, category_id, stream_display_name, stream_source, stream_icon,
-			movie_properties, target_container, added, series_no, direct_source,
-			tmdb_language, year, ` + "`order`" + `, gen_timestamps, direct_proxy
-		) VALUES (
-			5, '[]', ?, ?, ?, ?, 'mp4', ?, ?, 1, ?, 0, 0, 1, 1
-		)`,
-		displayName, string(streamSource), poster,
-		string(propsJSON), added, fmt.Sprintf("%d-%d", e.Season, e.Episode), languageOrDefault(e.Language),
+		INSERT INTO series_episodes (
+			situacao, tipo_link, link, series_id, category_id, episode_num, title,
+			container_extension, duration_secs, duration, cover_big, plot, movie_image,
+			added, season, tmdb_id
+		) VALUES ('ativo', 'padrao', ?, ?, ?, ?, ?, 'mp4', ?, ?, ?, ?, ?, ?, ?, ?)`,
+		e.StreamURL, e.SeriesID, categoryID, e.Episode, displayName,
+		e.Runtime*60, durationHMS(e.Runtime), poster, e.Plot, poster, added, e.Season, 0,
 	)
 	if err != nil {
 		return 0, fmt.Errorf("insert episode: %w", err)
 	}
-	episodeStreamID, err := res.LastInsertId()
-	if err != nil {
-		return 0, err
-	}
-	if err := d.linkStreamServer(ctx, episodeStreamID); err != nil {
-		return 0, err
-	}
+	return res.LastInsertId()
+}
 
-	// streams_episodes maps stream_id <-> series_id.
-	_, err = d.conn.ExecContext(ctx,
-		`INSERT INTO streams_episodes (season_num, series_id, episode_num, stream_id) VALUES (?, ?, ?, ?)`,
-		e.Season, e.SeriesID, e.Episode, episodeStreamID)
-	if err != nil {
-		return 0, fmt.Errorf("insert streams_episodes: %w", err)
-	}
-	return episodeStreamID, nil
+func (d *DB) UpdateEpisodeSource(ctx context.Context, episodeID int64, url string) error {
+	_, err := d.conn.ExecContext(ctx, `UPDATE series_episodes SET link = ? WHERE id = ?`, url, episodeID)
+	return err
 }
 
 // ---------- channels (live TV) ----------
@@ -507,7 +473,7 @@ type Channel struct {
 func (d *DB) ChannelExists(ctx context.Context, name string) (int64, bool, error) {
 	var id int64
 	err := d.conn.QueryRowContext(ctx,
-		`SELECT id FROM streams WHERE stream_display_name = ? AND type = 1 LIMIT 1`, name).Scan(&id)
+		`SELECT id FROM streams WHERE name = ? AND stream_type = 'live' LIMIT 1`, name).Scan(&id)
 	if err == sql.ErrNoRows {
 		return 0, false, nil
 	}
@@ -526,8 +492,10 @@ func (d *DB) UpsertChannel(ctx context.Context, c Channel) (int64, bool, error) 
 // UpsertChannelCached é igual ao UpsertChannel mas aceita um cache pré-carregado
 // de canais existentes (nome → id) para eliminar o SELECT de verificação N+1.
 func (d *DB) UpsertChannelCached(ctx context.Context, c Channel, cache map[string]int64) (int64, bool, error) {
-	urlsJSON, _ := json.Marshal(c.URLs)
-	categoryJSON := categoryIDsJSON(c.CategoryIDs)
+	link := ""
+	if len(c.URLs) > 0 {
+		link = c.URLs[0]
+	}
 
 	// Verifica cache antes de ir ao banco.
 	var existingID int64
@@ -546,26 +514,20 @@ func (d *DB) UpsertChannelCached(ctx context.Context, c Channel, cache map[strin
 	if exists {
 		id := existingID
 		_, err := d.conn.ExecContext(ctx,
-			`UPDATE streams SET stream_source = ?, category_id = ?, stream_icon = ? WHERE id = ?`,
-			string(urlsJSON), categoryJSON, c.LogoURL, id)
+			`UPDATE streams SET link = ?, category_id = ?, stream_icon = ? WHERE id = ?`,
+			link, firstCategoryID(c.CategoryIDs), c.LogoURL, id)
 		if err != nil {
 			return 0, false, err
-		}
-		var hasServer int
-		_ = d.conn.QueryRowContext(ctx, `SELECT 1 FROM streams_servers WHERE stream_id = ? LIMIT 1`, id).Scan(&hasServer)
-		if hasServer == 0 {
-			_ = d.linkStreamServer(ctx, id)
 		}
 		return id, false, nil
 	}
 
 	res, err := d.conn.ExecContext(ctx, `
 		INSERT INTO streams (
-			type, category_id, stream_display_name, stream_source, stream_icon,
-			channel_id, `+"`order`"+`, gen_timestamps, allow_record, target_container,
-			tmdb_language, direct_source, direct_proxy
-		) VALUES (1, ?, ?, ?, ?, NULL, 1, 1, 1, 'mp4', 'pt-BR', 1, 1)`,
-		categoryJSON, c.BaseName, string(urlsJSON), c.LogoURL,
+			situacao, tipo_link, link, name, stream_type, stream_icon, added,
+			category_id, container_extension, is_adult
+		) VALUES ('ativo', 'padrao', ?, ?, 'live', ?, ?, ?, 'ts', 0)`,
+		link, c.BaseName, c.LogoURL, strconv.FormatInt(time.Now().Unix(), 10), firstCategoryID(c.CategoryIDs),
 	)
 	if err != nil {
 		return 0, false, fmt.Errorf("insert channel %q: %w", c.BaseName, err)
@@ -574,15 +536,12 @@ func (d *DB) UpsertChannelCached(ctx context.Context, c Channel, cache map[strin
 	if err != nil {
 		return 0, false, err
 	}
-	if err := d.linkStreamServer(ctx, streamID); err != nil {
-		return 0, false, err
-	}
 	return streamID, true, nil
 }
 
-// PreloadChannels returns existing live-TV channels keyed by stream_display_name.
+// PreloadChannels returns existing live-TV channels keyed by name.
 func (d *DB) PreloadChannels(ctx context.Context) (map[string]int64, error) {
-	rows, err := d.conn.QueryContext(ctx, `SELECT id, stream_display_name FROM streams WHERE type = 1`)
+	rows, err := d.conn.QueryContext(ctx, `SELECT id, name FROM streams WHERE stream_type = 'live'`)
 	if err != nil {
 		return nil, err
 	}

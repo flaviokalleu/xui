@@ -86,11 +86,11 @@ type XtreamImporter struct {
 	xui           *xui.DB
 	log           *slog.Logger
 	http          *http.Client
-	DryRun        bool                // se true, busca mas não insere no banco
-	Upload        UploadFunc          // se não nil, chamado para cada item antes do insert
-	OnSeriesStart OnSeriesStartFunc   // se não nil, chamado antes dos episódios de cada série
-	OnEpisode     OnEpisodeFunc       // se não nil, chamado antes de cada episódio iniciar download
-	OnXUIUpdate   OnXUIUpdateFunc     // se não nil, chamado após cada insert/update no XUI
+	DryRun        bool              // se true, busca mas não insere no banco
+	Upload        UploadFunc        // se não nil, chamado para cada item antes do insert
+	OnSeriesStart OnSeriesStartFunc // se não nil, chamado antes dos episódios de cada série
+	OnEpisode     OnEpisodeFunc     // se não nil, chamado antes de cada episódio iniciar download
+	OnXUIUpdate   OnXUIUpdateFunc   // se não nil, chamado após cada insert/update no XUI
 }
 
 // NewXtreamImporter creates a new XtreamImporter.
@@ -317,12 +317,12 @@ func (x *XtreamImporter) ImportMovies(ctx context.Context, creds *XtreamCreds, o
 					continue
 				}
 				updated++
-				pendingBouquet = append(pendingBouquet, existingID)
+				pendingBouquet = append(pendingBouquet, xuiCatID)
 				if x.OnXUIUpdate != nil {
 					x.OnXUIUpdate(false)
 				}
 			} else {
-				newID, insErr := x.xui.InsertMovie(ctx, xui.Movie{
+				_, insErr := x.xui.InsertMovie(ctx, xui.Movie{
 					TMDBID:       streamID,
 					Title:        s.Name,
 					Description:  s.Plot,
@@ -342,7 +342,7 @@ func (x *XtreamImporter) ImportMovies(ctx context.Context, creds *XtreamCreds, o
 					continue
 				}
 				inserted++
-				pendingBouquet = append(pendingBouquet, newID)
+				pendingBouquet = append(pendingBouquet, xuiCatID)
 				if x.OnXUIUpdate != nil {
 					x.OnXUIUpdate(true)
 				}
@@ -444,10 +444,10 @@ func (x *XtreamImporter) ImportSeries(ctx context.Context, creds *XtreamCreds, m
 					continue
 				}
 				seriesIns++
-				_ = x.xui.AddToBouquet(ctx, bouquetID, xui.BouquetSeries, xuiSeriesID)
 			} else {
 				seriesUpd++
 			}
+			_ = x.xui.AddToBouquet(ctx, bouquetID, xui.BouquetSeries, xuiCatID)
 		} else {
 			xuiSeriesID = seriesID // placeholder no dry-run
 			seriesIns++
@@ -559,7 +559,7 @@ func (x *XtreamImporter) importEpisodes(ctx context.Context, creds *XtreamCreds,
 
 			// Em modo download+XUI: atualiza URL se episódio já existia, insere caso contrário
 			if xuiEpID, exists, err := x.xui.EpisodeExists(ctx, xuiSeriesID, season, int(epNum)); err == nil && exists {
-				_ = x.xui.UpdateMovieSource(ctx, xuiEpID, epStreamURL, false)
+				_ = x.xui.UpdateEpisodeSource(ctx, xuiEpID, epStreamURL)
 				added++
 				if x.OnXUIUpdate != nil {
 					x.OnXUIUpdate(false)

@@ -153,7 +153,7 @@ func (i *Importer) handleMovie(ctx context.Context, tmdbID int64, streamURL stri
 		bqID, _ = i.getMoviesBouquet(ctx)
 	}
 	if bqID != 0 {
-		_ = i.xui.AddToBouquet(ctx, bqID, xui.BouquetMovies, streamID)
+		_ = i.xui.AddToBouquet(ctx, bqID, xui.BouquetMovies, categoryIDs...)
 	}
 
 	i.triggerReload()
@@ -220,7 +220,7 @@ func (i *Importer) handleEpisode(ctx context.Context, tmdbID int64, season, epis
 			bqID, _ = i.getSeriesBouquet(ctx)
 		}
 		if bqID != 0 {
-			_ = i.xui.AddToBouquet(ctx, bqID, xui.BouquetSeries, seriesID)
+			_ = i.xui.AddToBouquet(ctx, bqID, xui.BouquetSeries, categoryIDs...)
 		}
 	}
 

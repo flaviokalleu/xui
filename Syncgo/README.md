@@ -1,12 +1,14 @@
 # Syncgo
 
-Bot do Telegram + servidor HTTP que transforma o Telegram em CDN para vídeos, áudios e documentos. Opcionalmente insere automaticamente no painel **XUI ONE / XtreamUI**.
+Versão 2.0.0-pbctv.
+
+Bot do Telegram + servidor HTTP que transforma o Telegram em CDN para vídeos, áudios e documentos. Opcionalmente insere automaticamente no painel **PB&Ctv**.
 
 ## O que ele faz
 
 ```
 Você manda um arquivo pro bot     →  Bot gera link HTTP de download/streaming
-                                  →  (opcional) Insere automático no painel XUI
+                                  →  (opcional) Insere automático no painel PB&Ctv
                                   →  (opcional) Importa canais a partir de M3U
 ```
 
@@ -15,14 +17,14 @@ Você manda um arquivo pro bot     →  Bot gera link HTTP de download/streaming
 1. Você nomeia o arquivo `240022.mp4` (filme) ou `240022_S01E02.mp4` (episódio) usando o ID do TMDB.
 2. Manda no privado do bot.
 3. Bot devolve 2 links: 📥 Download direto e 🖥 Player web.
-4. Se XUI estiver configurado, ele já aparece no painel com capa, sinopse, gênero, ano, etc.
+4. Se o painel PB&Ctv estiver configurado, ele já aparece no painel com capa, sinopse, gênero, ano, etc.
 
 ## Instalação rápida
 
 ### 1. Pré-requisitos
 
 - **Go 1.26+** (o binário já vem compilado, ignore se for usar `syncgo.exe`)
-- **Painel XUI ONE** com MySQL acessível (opcional)
+- **Painel PB&Ctv** com MySQL acessível (opcional)
 - Conta no Telegram
 
 ### 2. Criar bot e canal
@@ -43,13 +45,13 @@ LOG_CHANNEL=-1003718091048  # ID do canal (com -100)
 FQDN=meudominio.com         # domínio público para os links
 ```
 
-Se quiser auto-insert no XUI:
+Se quiser auto-insert no painel PB&Ctv:
 
 ```env
 XUI_HOST=ip-do-painel
-XUI_USER=usuario-mysql
+XUI_USER=xsp
 XUI_PASSWORD=senha-mysql
-XUI_DATABASE=xui
+XUI_DATABASE=xsp_panel
 TMDB_API_KEY=sua-chave-tmdb
 ```
 
@@ -66,7 +68,7 @@ Pronto. Bot fica online ouvindo o Telegram, servidor HTTP escutando na porta 808
 | Comando | O que faz |
 |---|---|
 | `syncgo` | Roda o bot + servidor HTTP (modo padrão) |
-| `syncgo channels import lista.m3u` | Importa canais de TV ao vivo de um arquivo M3U pro XUI |
+| `syncgo channels import lista.m3u` | Importa canais de TV ao vivo de um arquivo M3U pro painel PB&Ctv |
 | `syncgo help` | Mostra ajuda |
 
 ## Como nomear os arquivos
@@ -107,7 +109,7 @@ internal/
 ├── streamer/    Lê chunks de 1 MiB do Telegram via upload.GetFile
 ├── server/      net/http com suporte a Range, /watch, etc.
 ├── database/    SQLite local (mapping hash↔arquivo, users)
-├── xui/         Driver MySQL pro painel XUI ONE
+├── xui/         Driver MySQL pro painel PB&Ctv
 ├── tmdb/        Cliente TMDB (filmes, séries, episódios)
 ├── parser/      Detecta filename pattern (movie / episode)
 ├── importer/    Cola tudo: parser → tmdb → xui (auto-insert)

@@ -56,12 +56,12 @@ func NewChannelImporter(x *xui.DB, reloader *xui.Reloader, log *slog.Logger) *Ch
 }
 
 type ChannelImportResult struct {
-	TotalRead    int
-	Inserted     int
-	Updated      int
-	Categories   int
-	BouquetID    int64
-	StreamIDs    []int64
+	TotalRead  int
+	Inserted   int
+	Updated    int
+	Categories int
+	BouquetID  int64
+	StreamIDs  []int64
 }
 
 func (c *ChannelImporter) ImportFromFile(ctx context.Context, path string) (*ChannelImportResult, error) {
@@ -129,12 +129,12 @@ func (c *ChannelImporter) ImportFromURL(ctx context.Context, rawURL string) (*Ch
 	return nil, lastErr
 }
 
-
 func (c *ChannelImporter) importEntries(ctx context.Context, entries []m3u.Entry) (*ChannelImportResult, error) {
 	if c.xui == nil {
 		return nil, fmt.Errorf("XUI database não configurado")
 	}
 	res := &ChannelImportResult{TotalRead: len(entries)}
+	bouquetCategories := map[int64]bool{}
 
 	// group multiple URLs by base name
 	type bucket struct {
@@ -201,6 +201,7 @@ func (c *ChannelImporter) importEntries(ctx context.Context, entries []m3u.Entry
 			categoryID = id
 			categoryCache[cacheKey] = id
 		}
+		bouquetCategories[categoryID] = true
 
 		streamID, isNew, err := c.xui.UpsertChannelCached(ctx, xui.Channel{
 			BaseName:    base,
@@ -222,8 +223,12 @@ func (c *ChannelImporter) importEntries(ctx context.Context, entries []m3u.Entry
 	}
 	res.Categories = len(categoryCache)
 
-	if len(res.StreamIDs) > 0 {
-		if err := c.xui.AddToBouquet(ctx, bouquetID, xui.BouquetChannels, res.StreamIDs...); err != nil {
+	if len(bouquetCategories) > 0 {
+		categoryIDs := make([]int64, 0, len(bouquetCategories))
+		for id := range bouquetCategories {
+			categoryIDs = append(categoryIDs, id)
+		}
+		if err := c.xui.AddToBouquet(ctx, bouquetID, xui.BouquetChannels, categoryIDs...); err != nil {
 			c.log.Error("add to bouquet CANAIS", "err", err)
 		}
 	}
