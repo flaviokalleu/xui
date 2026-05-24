@@ -15,7 +15,7 @@ func main() {
 	_ = godotenv.Load()
 
 	fmt.Println("=== Syncgo DB Clean ===")
-	fmt.Println("Apaga do XUI MySQL: filmes, séries, episódios")
+	fmt.Println("Apaga do painel PB&Ctv MySQL: filmes, séries, episódios")
 	fmt.Println("Apaga do SQLite: histórico de downloads (para re-baixar tudo)")
 	fmt.Println()
 
@@ -31,9 +31,9 @@ func main() {
 	}
 	user := sqliteSetting(sqliteTemp, "xui_user", getEnv("XUI_USER", ""))
 	pass := sqliteSetting(sqliteTemp, "xui_password", getEnv("XUI_PASSWORD", ""))
-	dbName := sqliteSetting(sqliteTemp, "xui_database", getEnv("XUI_DATABASE", "xui"))
+	dbName := sqliteSetting(sqliteTemp, "xui_database", getEnv("XUI_DATABASE", "xsp_panel"))
 	if dbName == "" {
-		dbName = "xui"
+		dbName = "xsp_panel"
 	}
 	sqliteTemp.Close()
 
@@ -72,9 +72,9 @@ func main() {
 func cleanMySQL(db *sql.DB) {
 	// Contagens antes
 	var movies, episodes, series int
-	db.QueryRow(`SELECT COUNT(*) FROM streams WHERE type = 2`).Scan(&movies)
-	db.QueryRow(`SELECT COUNT(*) FROM streams WHERE type = 5`).Scan(&episodes)
-	db.QueryRow(`SELECT COUNT(*) FROM streams_series`).Scan(&series)
+	db.QueryRow(`SELECT COUNT(*) FROM streams WHERE stream_type = 'movie'`).Scan(&movies)
+	db.QueryRow(`SELECT COUNT(*) FROM series_episodes`).Scan(&episodes)
+	db.QueryRow(`SELECT COUNT(*) FROM series`).Scan(&series)
 	fmt.Printf("Antes — Filmes: %d | Episódios: %d | Séries: %d\n", movies, episodes, series)
 
 	steps := []struct {
@@ -82,36 +82,20 @@ func cleanMySQL(db *sql.DB) {
 		sql  string
 	}{
 		{
-			"streams_servers (filmes)",
-			`DELETE ss FROM streams_servers ss JOIN streams s ON ss.stream_id = s.id WHERE s.type = 2`,
+			"bouquet_items (filmes/séries)",
+			`DELETE bi FROM bouquet_items bi JOIN categoria c ON c.id = bi.category_id WHERE c.type IN ('movie', 'series')`,
 		},
 		{
-			"streams_servers (episódios)",
-			`DELETE ss FROM streams_servers ss JOIN streams s ON ss.stream_id = s.id WHERE s.type = 5`,
+			"series_episodes",
+			`DELETE FROM series_episodes`,
 		},
 		{
-			"streams_episodes",
-			`DELETE FROM streams_episodes`,
+			"series",
+			`DELETE FROM series`,
 		},
 		{
-			"streams (filmes type=2)",
-			`DELETE FROM streams WHERE type = 2`,
-		},
-		{
-			"streams (episódios type=5)",
-			`DELETE FROM streams WHERE type = 5`,
-		},
-		{
-			"streams_series",
-			`DELETE FROM streams_series`,
-		},
-		{
-			"bouquets — zerar filmes",
-			`UPDATE bouquets SET bouquet_movies = '[]' WHERE bouquet_movies != '[]' AND bouquet_movies != ''`,
-		},
-		{
-			"bouquets — zerar séries",
-			`UPDATE bouquets SET bouquet_series = '[]' WHERE bouquet_series != '[]' AND bouquet_series != ''`,
+			"streams (filmes)",
+			`DELETE FROM streams WHERE stream_type = 'movie'`,
 		},
 	}
 
