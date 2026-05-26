@@ -23,9 +23,14 @@ func (p *Poller) buildXtreamImporter(ctx context.Context) (*importer.XtreamImpor
 	pass, _ := p.deps.DB.GetSetting(ctx, "xui_password")
 	dbName, _ := p.deps.DB.GetSetting(ctx, "xui_database")
 	portStr, _ := p.deps.DB.GetSetting(ctx, "xui_port")
+	adminIDStr, _ := p.deps.DB.GetSetting(ctx, "xui_admin_id")
 	port := 3306
 	if n, err := strconv.Atoi(portStr); err == nil && n > 0 {
 		port = n
+	}
+	adminID := p.deps.Config.XUIAdminID
+	if n, err := strconv.Atoi(adminIDStr); err == nil && n > 0 {
+		adminID = n
 	}
 	if dbName == "" {
 		dbName = "xui"
@@ -35,7 +40,7 @@ func (p *Poller) buildXtreamImporter(ctx context.Context) (*importer.XtreamImpor
 	}
 	db, err := xui.Open(xui.Config{
 		Host: host, Port: port, User: user, Password: pass,
-		Database: dbName, ServerID: 1,
+		Database: dbName, ServerID: 1, AdminID: adminID,
 	})
 	if err != nil {
 		return nil, fmt.Errorf("conexão com o painel falhou: %w", err)
@@ -1146,9 +1151,14 @@ func (p *Poller) buildChannelImporter(ctx context.Context) (*importer.ChannelImp
 	pass, _ := p.deps.DB.GetSetting(ctx, "xui_password")
 	dbName, _ := p.deps.DB.GetSetting(ctx, "xui_database")
 	portStr, _ := p.deps.DB.GetSetting(ctx, "xui_port")
+	adminIDStr, _ := p.deps.DB.GetSetting(ctx, "xui_admin_id")
 	port := 3306
 	if n, err := strconv.Atoi(portStr); err == nil && n > 0 {
 		port = n
+	}
+	adminID := p.deps.Config.XUIAdminID
+	if n, err := strconv.Atoi(adminIDStr); err == nil && n > 0 {
+		adminID = n
 	}
 	if dbName == "" {
 		dbName = "xui"
@@ -1158,7 +1168,7 @@ func (p *Poller) buildChannelImporter(ctx context.Context) (*importer.ChannelImp
 	}
 	db, err := xui.Open(xui.Config{
 		Host: host, Port: port, User: user, Password: pass,
-		Database: dbName, ServerID: 1,
+		Database: dbName, ServerID: 1, AdminID: adminID,
 	})
 	if err != nil {
 		return nil, fmt.Errorf("conexão com o painel falhou: %w", err)

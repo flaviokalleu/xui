@@ -381,6 +381,12 @@ func (p *Poller) tryConnectXUI(ctx context.Context, sess *setupSession) {
 		port = 3306
 	}
 
+	adminIDStr, _ := p.deps.DB.GetSetting(ctx, "xui_admin_id")
+	adminID := p.deps.Config.XUIAdminID
+	if n, err := strconv.Atoi(adminIDStr); err == nil && n > 0 {
+		adminID = n
+	}
+
 	sess.closeXUI()
 	db, err := xui.Open(xui.Config{
 		Host:     sess.Host,
@@ -389,6 +395,7 @@ func (p *Poller) tryConnectXUI(ctx context.Context, sess *setupSession) {
 		Password: sess.Pass,
 		Database: sess.DbName,
 		ServerID: 1,
+		AdminID:  adminID,
 	})
 	if err != nil {
 		p.setupSend(ctx, sess.ChatID,

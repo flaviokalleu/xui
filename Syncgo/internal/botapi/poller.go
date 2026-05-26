@@ -1117,9 +1117,14 @@ func (p *Poller) pingAndRebuildXUI(ctx context.Context) string {
 	pass, _ := p.deps.DB.GetSetting(ctx, "xui_password")
 	dbName, _ := p.deps.DB.GetSetting(ctx, "xui_database")
 	portStr, _ := p.deps.DB.GetSetting(ctx, "xui_port")
+	adminIDStr, _ := p.deps.DB.GetSetting(ctx, "xui_admin_id")
 	port := 3306
 	if n, err := strconv.Atoi(portStr); err == nil && n > 0 {
 		port = n
+	}
+	adminID := p.deps.Config.XUIAdminID
+	if n, err := strconv.Atoi(adminIDStr); err == nil && n > 0 {
+		adminID = n
 	}
 	if dbName == "" {
 		dbName = "xui"
@@ -1135,7 +1140,7 @@ func (p *Poller) pingAndRebuildXUI(ctx context.Context) string {
 		start := time.Now()
 		db, err := xui.Open(xui.Config{
 			Host: host, Port: port, User: user, Password: pass,
-			Database: dbName, ServerID: 1,
+			Database: dbName, ServerID: 1, AdminID: adminID,
 		})
 		ch <- result{db, time.Since(start), err}
 	}()

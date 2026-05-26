@@ -50,6 +50,7 @@ type Config struct {
 	XUIPassword string
 	XUIDatabase string
 	XUIServerID int
+	XUIAdminID  int // ID do admin padrão na tabela admin (default 1)
 
 	// TMDB API
 	TMDBAPIKey   string
@@ -90,6 +91,7 @@ func Load() (*Config, error) {
 		XUIPort:              3306,
 		XUIDatabase:          "xui",
 		XUIServerID:          1,
+		XUIAdminID:           1,
 		XUISSHPort:           22,
 		XUIReloadCmd:         "sudo service xuione reload",
 		XUIReloadDebounceSec: 30,
@@ -101,6 +103,13 @@ func Load() (*Config, error) {
 	cfg.Port = getEnvInt("PORT", 8080)
 	cfg.Workers = getEnvInt("WORKERS", 4)
 	cfg.OwnerID = getEnvInt64("OWNER_ID", 0)
+	cfg.XUIAdminID = getEnvInt("XUI_ADMIN_ID", 1)
+	if v := os.Getenv("XUI_HOST"); v != "" { cfg.XUIHost = v }
+	if v := os.Getenv("XUI_USER"); v != "" { cfg.XUIUser = v }
+	if v := os.Getenv("XUI_PASSWORD"); v != "" { cfg.XUIPassword = v }
+	if v := os.Getenv("XUI_DATABASE"); v != "" { cfg.XUIDatabase = v }
+	cfg.XUIPort = getEnvInt("XUI_PORT", cfg.XUIPort)
+	cfg.XUIServerID = getEnvInt("XUI_SERVER_ID", cfg.XUIServerID)
 
 	if admins := os.Getenv("ADMINS"); admins != "" {
 		for _, a := range strings.Fields(strings.ReplaceAll(admins, ",", " ")) {
@@ -200,6 +209,7 @@ func (c *Config) ApplyDB(ctx context.Context, db SettingsGetter) {
 	c.XUIPassword = str("xui_password", c.XUIPassword)
 	c.XUIDatabase = str("xui_database", c.XUIDatabase)
 	c.XUIServerID = integer("xui_server_id", c.XUIServerID)
+	c.XUIAdminID = integer("xui_admin_id", c.XUIAdminID)
 
 	// SSH host defaults to xui_host when not set separately.
 	c.XUISSHHost = str("xui_ssh_host", c.XUIHost)

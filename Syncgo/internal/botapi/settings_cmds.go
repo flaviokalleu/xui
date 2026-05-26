@@ -19,6 +19,7 @@ var settingsMeta = []settingInfo{
 	{key: "xui_password", label: "XUI senha", group: "XUI MySQL", sensitive: true},
 	{key: "xui_database", label: "XUI banco", group: "XUI MySQL", sensitive: false},
 	{key: "xui_server_id", label: "XUI server_id", group: "XUI MySQL", sensitive: false},
+	{key: "xui_admin_id", label: "XUI admin_id (ID do admin padrão)", group: "XUI MySQL", sensitive: false},
 	// XUI SSH reload
 	{key: "xui_ssh_host", label: "SSH host (padrão=xui_host)", group: "XUI SSH", sensitive: false},
 	{key: "xui_ssh_port", label: "SSH porta", group: "XUI SSH", sensitive: false},

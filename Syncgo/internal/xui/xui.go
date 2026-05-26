@@ -22,11 +22,13 @@ type Config struct {
 	Password string
 	Database string
 	ServerID int
+	AdminID  int // ID do administrador padrão na tabela admin (default 1)
 }
 
 type DB struct {
 	conn     *sql.DB
 	serverID int
+	adminID  int
 }
 
 func Open(cfg Config) (*DB, error) {
@@ -35,6 +37,9 @@ func Open(cfg Config) (*DB, error) {
 	}
 	if cfg.ServerID == 0 {
 		cfg.ServerID = 1
+	}
+	if cfg.AdminID == 0 {
+		cfg.AdminID = 1
 	}
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true&loc=Local&charset=utf8mb4&interpolateParams=true",
 		cfg.User, cfg.Password, cfg.Host, cfg.Port, cfg.Database)
@@ -47,7 +52,7 @@ func Open(cfg Config) (*DB, error) {
 	if err := conn.Ping(); err != nil {
 		return nil, fmt.Errorf("ping mysql %s:%d: %w", cfg.Host, cfg.Port, err)
 	}
-	return &DB{conn: conn, serverID: cfg.ServerID}, nil
+	return &DB{conn: conn, serverID: cfg.ServerID, adminID: cfg.AdminID}, nil
 }
 
 func (d *DB) Close() error { return d.conn.Close() }
@@ -72,8 +77,8 @@ func (d *DB) GetOrCreateCategory(ctx context.Context, name, categoryType string)
 
 	res, err := d.conn.ExecContext(ctx,
 		`INSERT INTO categoria (nome, type, parent_id, is_adult, admin_id, position)
-		 VALUES (?, ?, 0, 0, 0, ?)`,
-		name, categoryType, position)
+		 VALUES (?, ?, 0, 0, ?, ?)`,
+		name, categoryType, d.adminID, position)
 	if err != nil {
 		return 0, fmt.Errorf("insert category %q: %w", name, err)
 	}
